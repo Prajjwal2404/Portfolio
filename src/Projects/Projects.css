@@ -1,0 +1,145 @@
+.projects-container {
+    position: relative;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-image 0.5s ease;
+}
+
+.projects-container h1 {
+    text-align: center;
+    margin: 2.5rem 0;
+    user-select: none;
+}
+
+.projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    overflow-y: hidden;
+}
+
+.projects-wrapper.less {
+    height: 44rem;
+}
+
+.project-card {
+    width: min(21.5rem, 95dvw);
+    border-radius: 10px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.image-div {
+    position: relative;
+}
+
+.project-img {
+    width: 100%;
+    border-radius: 15px;
+    transition: filter 0.25s linear;
+}
+
+.image-div:hover .project-img {
+    filter: blur(2.5px);
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.25rem;
+    aspect-ratio: 1;
+    overflow: hidden;
+    transition: opacity 0.25s linear, filter 0.25s linear;
+}
+
+.logo:hover {
+    filter: brightness(80%);
+}
+
+.image-div:hover .logo {
+    opacity: 1;
+}
+
+.github {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #434343, #000000);
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    display: flex;
+    cursor: pointer;
+    transition: filter 0.25s linear;
+}
+
+.github:hover {
+    filter: brightness(75%);
+}
+
+.project-card p {
+    font-size: 0.9rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tags span {
+    font-size: 0.8rem;
+    text-shadow: 2px 2px 30px;
+}
+
+.more-btn {
+    margin-top: 2rem;
+    width: min(21.5rem, 95dvw);
+    padding: 0.5rem 0;
+    border-radius: 20px;
+    font-weight: 500;
+    color: inherit;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: filter 0.25s linear;
+}
+
+.more-btn:hover {
+    filter: brightness(80%);
+}
+
+@media (pointer: coarse) {
+
+    .image-div:hover .project-img {
+        filter: blur(0);
+    }
+
+    .logo {
+        top: 5%;
+        left: 5%;
+        transform: translate(0, 0);
+        opacity: 1;
+        border-radius: 50%;
+        padding: 0.25rem;
+        width: 2rem;
+    }
+}

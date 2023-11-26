@@ -1,0 +1,37 @@
+.skills-container {
+    position: relative;
+    padding: 3rem 1rem;
+    transition: background-image 0.5s ease;
+}
+
+.skills-container h1 {
+    text-align: center;
+    margin: 2.5rem 0;
+    user-select: none;
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill-div {
+    width: 7rem;
+    height: 7rem;
+}
+
+.skill-div p {
+    user-select: none;
+    text-align: center;
+    margin-top: 0.5rem;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 510px) {
+    .skill-div {
+        height: 6rem;
+        width: 6rem;
+    }
+}

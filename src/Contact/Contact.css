@@ -1,0 +1,134 @@
+.contact-container {
+    position: relative;
+    width: 100%;
+    padding: 3rem 0;
+    z-index: 1;
+}
+
+.contact-container h1 {
+    text-align: center;
+    user-select: none;
+}
+
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    gap: 1rem;
+    width: 100%;
+    padding: 2.5rem 1rem;
+}
+
+.contact-card {
+    height: 26.5rem;
+    min-width: min(30rem, 95dvw);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    gap: 1rem;
+    --background-color: transparent;
+    --text-color: transparent;
+    --hover-color: transparent;
+}
+
+.contact-card h1 {
+    text-align: start;
+}
+
+.contact-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.socials a {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 15px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    transition: background-color 0.25s linear;
+}
+
+.socials a:hover {
+    background-color: var(--hover-color);
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.email {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.25s linear;
+}
+
+.email:hover {
+    text-decoration-color: inherit;
+}
+
+.contact-card .resume {
+    width: 100%;
+    padding: 0.75rem 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.25s linear;
+}
+
+.contact-card .resume:hover {
+    background-color: var(--hover-color);
+}
+
+.earth {
+    height: min(30rem, 95dvw);
+    min-width: min(30rem, 95dvw);
+}
+
+.earth.fade {
+    animation: fadeEarth 5s ease forwards;
+}
+
+@keyframes fadeEarth {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .contact-card {
+        height: 23.5rem;
+        padding: 1rem;
+        justify-content: space-between;
+    }
+
+}

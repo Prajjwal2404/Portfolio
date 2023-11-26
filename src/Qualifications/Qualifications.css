@@ -1,0 +1,180 @@
+.qualifications-container {
+    position: relative;
+    width: 100%;
+    padding: 3rem 1rem;
+    transition: background-image 0.5s ease;
+}
+
+.qualifications-container h1 {
+    text-align: center;
+    margin: 2.5rem 0;
+    user-select: none;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    --time: 0;
+    --timeline: transparent;
+    --textbox: transparent;
+    --small: transparent;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 0;
+    background-color: var(--timeline);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline.show::after {
+    animation: moveline var(--time) linear forwards;
+}
+
+@keyframes moveline {
+    100% {
+        height: 100%;
+    }
+}
+
+.container {
+    padding: 0.6rem 3.25rem;
+    position: relative;
+    width: 50%;
+    left: 0;
+    transform: translateY(-30px);
+}
+
+.container.visible {
+    animation: movedown 1s linear forwards;
+}
+
+@keyframes movedown {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.right-container {
+    left: 50%;
+}
+
+.middle-circle {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    right: -1rem;
+    top: 2rem;
+    z-index: 10;
+    background-color: var(--timeline);
+}
+
+.right-container .middle-circle {
+    left: -1rem;
+}
+
+.textbox {
+    padding: 1.25rem 2rem;
+    background-color: var(--textbox);
+    position: relative;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.container.visible .textbox {
+    animation: appear 0.5s linear forwards;
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+.textbox .institute {
+    font-weight: 450;
+    margin-bottom: 0.5rem;
+}
+
+.textbox div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-weight: 400;
+    color: var(--small);
+}
+
+.textbox .time-place {
+    margin-bottom: 0.5rem;
+}
+
+.textbox .score {
+    white-space: nowrap;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 1.4rem;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1rem solid var(--textbox);
+    right: calc(-1rem + 1px);
+}
+
+.right-arrow {
+    position: absolute;
+    top: 1.4rem;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid var(--textbox);
+    left: calc(-1rem + 1px);
+}
+
+@media screen and (max-width: 850px) {
+
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline::after {
+        left: calc((50% - min(15.5rem, 47.5dvw)) + 1rem);
+    }
+
+    .container {
+        width: min(31rem, 95dvw);
+        padding-left: 5rem;
+        padding-right: 0;
+    }
+
+    .right-container {
+        left: 0;
+    }
+
+    .middle-circle {
+        left: 0 !important;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        border-right: 1rem solid var(--textbox);
+        border-left: none;
+        left: calc(-1rem + 1px);
+        right: unset;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .textbox .score {
+        white-space: initial;
+        text-align: end;
+    }
+}
