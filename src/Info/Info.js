@@ -19,11 +19,10 @@ import gamestore from '../img/projects/game-store.png'
 import carrent from '../img/projects/car-rent.png'
 import calculator from '../img/projects/calculator.png'
 import dashboard from '../img/projects/dashboard.png'
-import { ReactComponent as ShoeStoreIcon } from '../img/icons/shoe-store.svg'
-import { ReactComponent as GameStoreIcon } from '../img/icons/game-store.svg'
-import { ReactComponent as CarRentIcon } from '../img/icons/car-rent.svg'
-import { ReactComponent as CalculatorIcon } from '../img/icons/calculator.svg'
-import { ReactComponent as DashboardIcon } from '../img/icons/dashboard.svg'
+import { GiRunningShoe } from "react-icons/gi"
+import { IoGameController, IoCar } from "react-icons/io5"
+import { ImCalculator } from "react-icons/im"
+import { BiSolidDashboard } from "react-icons/bi"
 
 export function works(mode) {
     return [
@@ -45,7 +44,7 @@ export function works(mode) {
                 }
             ],
             image: shoestore,
-            logo: <ShoeStoreIcon style={{ fill: mode ? '#252c2a' : '#dad3d5' }} />,
+            logo: <GiRunningShoe />,
             code_link: 'https://github.com/Prajjwal2404/Shoe-Store',
             project_link: 'https://shoe-store-160b2.firebaseapp.com/'
         },
@@ -67,7 +66,7 @@ export function works(mode) {
                 }
             ],
             image: gamestore,
-            logo: <GameStoreIcon style={{ fill: mode ? '#252c2a' : '#dad3d5' }} />,
+            logo: <IoGameController />,
             code_link: 'https://github.com/Prajjwal2404/Game-Store',
             project_link: 'https://webgamestore.000webhostapp.com/'
         },
@@ -85,7 +84,7 @@ export function works(mode) {
                 }
             ],
             image: carrent,
-            logo: <CarRentIcon style={{ fill: mode ? '#252c2a' : '#dad3d5' }} />,
+            logo: <IoCar />,
             code_link: 'https://github.com/Prajjwal2404/Car-Rent',
             project_link: 'https://webcarrent.000webhostapp.com/'
         },
@@ -103,7 +102,7 @@ export function works(mode) {
                 }
             ],
             image: calculator,
-            logo: <CalculatorIcon style={{ fill: mode ? '#252c2a' : '#dad3d5' }} />,
+            logo: <ImCalculator style={{ borderRadius: window.matchMedia('(pointer: coarse)').matches ? '35%' : '0' }} />,
             code_link: 'https://github.com/Prajjwal2404/Calculator',
             project_link: 'https://play.google.com/store/apps/details?id=com.prajjwal.calculator'
         },
@@ -121,7 +120,7 @@ export function works(mode) {
                 }
             ],
             image: dashboard,
-            logo: <DashboardIcon style={{ fill: mode ? '#252c2a' : '#dad3d5' }} />,
+            logo: <BiSolidDashboard />,
             code_link: 'https://github.com/Prajjwal2404/Dashboard',
             project_link: 'https://webreactdashboard.netlify.app/'
         }

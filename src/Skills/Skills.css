@@ -1,6 +1,7 @@
 .skills-container {
     position: relative;
     padding: 3rem 1rem;
+    margin-top: -1px;
     transition: background-image 0.5s ease;
 }
 
@@ -27,6 +28,22 @@
     text-align: center;
     margin-top: 0.5rem;
     white-space: nowrap;
+}
+
+.low-spec {
+    height: 80%;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 50%;
+    margin: 10% auto 0 auto;
+}
+
+.low-spec img {
+    width: 100%;
+}
+
+.low-spec~p {
+    margin-top: 1.25rem;
 }
 
 @media screen and (max-width: 510px) {

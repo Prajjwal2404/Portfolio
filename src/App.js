@@ -5,6 +5,7 @@ import Skills from './Skills/Skills';
 import Qualifications from './Qualifications/Qualifications';
 import Contact from './Contact/Contact';
 import StarsCanvas from './Stars/Stars';
+import ErrorBoundary from './Components/ErrorBoundary/ErrorBoundary';
 
 export default function App() {
 
@@ -40,15 +41,17 @@ export default function App() {
 
   return (
     <div className="App">
-      <Hero mode={mode} setMode={setMode} />
-      <Projects mode={mode} />
-      <Skills mode={mode} />
-      <Qualifications mode={mode} refEl={ref} intersecting={intersecting.education} />
-      <div style={{ position: 'relative', backgroundColor: mode ? '#fff' : '#000' }}
-        ref={el => ref.current[1] = el}>
-        <Contact mode={mode} visible={visible} />
-        {visible && <StarsCanvas mode={mode} />}
-      </div>
+      <ErrorBoundary mode={mode}>
+        <Hero mode={mode} setMode={setMode} />
+        <Projects mode={mode} />
+        <Skills mode={mode} />
+        <Qualifications mode={mode} refEl={ref} intersecting={intersecting.education} />
+        <div style={{ position: 'relative', backgroundColor: mode ? '#fff' : '#000' }}
+          ref={el => ref.current[1] = el}>
+          <Contact mode={mode} visible={visible} />
+          {visible && <StarsCanvas mode={mode} />}
+        </div>
+      </ErrorBoundary>
     </div>
   )
 }

@@ -1,6 +1,61 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    gap: 0.25rem;
+}
+
+.loader p {
+    font-family: cursive;
+    letter-spacing: 1.5px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    transition: opacity 1s linear;
+}
+
+.loading {
+    padding: 0.25rem;
+    border-radius: 50%;
+    transition: filter 1s linear;
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.loader.done p {
+    opacity: 0;
+}
+
+.loader.done .loading {
+    filter: opacity(0);
+}
+
+.loader.done {
+    animation: loaded 1s ease-out 1s forwards;
+}
+
+@keyframes loaded {
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
 .banner {
     width: 100%;
-    height: 100dvh;
+    height: calc(100svh + 1px);
     position: relative;
     display: flex;
     justify-content: center;
@@ -25,13 +80,14 @@
     bottom: 56dvw;
     width: 100%;
     height: 3px;
+    pointer-events: none;
     transform: translateY(calc(var(--scrollY) / 1.5));
     transition: background-color 0.5s ease;
 }
 
 .layer-3 {
     position: absolute;
-    top: 3dvh;
+    top: 3svh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -62,6 +118,7 @@
 
 .layer-1 {
     transform: translateY(calc(var(--scrollY) / 1.5));
+    pointer-events: none;
 }
 
 .layer-2 {
@@ -93,7 +150,7 @@
     border-radius: 50%;
     height: 14.75dvw;
     width: 14.75dvw;
-    bottom: calc(100dvh - 4dvw);
+    bottom: calc(100svh - 4dvw);
     left: 50%;
     transform: translate(-49%, calc(var(--scrollY) / 1.25));
     cursor: pointer;
@@ -117,6 +174,7 @@
     width: 9rem;
     border-radius: 15px;
     border-top-right-radius: 0;
+    pointer-events: none;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -135,5 +193,5 @@
     top: 0;
     border-top: 1rem solid rgba(0, 0, 0, 0.5);
     border-right: 1rem solid transparent;
-    right: -1rem;
+    right: calc(-1rem + 1px);
 }

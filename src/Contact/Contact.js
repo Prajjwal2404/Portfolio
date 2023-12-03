@@ -49,7 +49,7 @@ export default function Contact({ mode, visible }) {
                     <div className='contact-info'><IoLocation /><p>Ideal Colony,&nbsp;&nbsp;Kothrud,&nbsp;&nbsp;Pune&nbsp;&nbsp;-&nbsp;&nbsp;411038</p></div>
                     <button onClick={() => window.open("https://drive.google.com/u/0/uc?id=190nqPgY3fJTaBiZ5zfSWR0kZcFIA5ycK&export=download", '_self')} className='resume'>DOWNLOAD RESUME</button>
                 </div>
-                {visible && <EarthCanvas />}
+                {visible && <EarthCanvas mode={mode} />}
             </div>
         </div>
     )

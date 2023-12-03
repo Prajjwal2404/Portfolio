@@ -1,0 +1,64 @@
+.error-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 7rem;
+    padding: 1rem;
+}
+
+.error-div h1 {
+    text-align: center;
+}
+
+.error-div button {
+    font-size: 1.25rem;
+}
+
+.error-div button,
+.retry button {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-weight: bold;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+    transition: filter 0.25s linear;
+}
+
+.retry {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.retry h2 {
+    text-align: center;
+}
+
+.retry button {
+    font-size: 1rem;
+}
+
+.error-div button:hover,
+.retry button:hover {
+    filter: brightness(80%);
+}
+
+@media (pointer: coarse) {
+
+    .error-div button:hover,
+    .retry button:hover {
+        filter: brightness(100%);
+    }
+
+    .error-div button:active,
+    .retry button:active {
+        filter: brightness(80%);
+    }
+}

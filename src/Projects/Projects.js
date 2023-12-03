@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { works } from '../Info/Info'
 import { FaGithub } from "react-icons/fa"
 import { IoChevronUpOutline, IoChevronDownOutline } from "react-icons/io5";
@@ -7,19 +7,21 @@ import './Projects.css'
 export default function Projects({ mode }) {
 
     const ref = useRef()
-
-    const [showMore, setShowMore] = useState(false)
+    const [showMore, setShowMore] = useState(window.innerWidth < 659)
     const [expanded, setExpanded] = useState(false)
+    const [width, setWidth] = useState(null)
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         function collapse() {
-            if (window.innerWidth < 659) {
-                setShowMore(true)
-                setExpanded(false)
+            if (window.innerWidth !== width) {
+                setWidth(window.innerWidth)
+                if (window.innerWidth < 659) setShowMore(true)
+                else {
+                    setShowMore(false)
+                    setExpanded(false)
+                }
             }
-            else setShowMore(false)
         }
-        collapse()
         window.addEventListener('resize', collapse)
         return () => window.removeEventListener('resize', collapse)
     }, [])
@@ -55,7 +57,7 @@ function ProjectCard({ props, mode }) {
             <div className='image-div'>
                 <img className='project-img' src={props.image} alt={props.title} />
                 <a className='logo' href={props.project_link} target='_blank'
-                    style={{ backgroundColor: mode ? '#edd3c0' : '#22225D' }}>
+                    style={{ backgroundColor: mode ? '#edd3c0' : '#22225D', color: mode ? '#252c2a' : '#dad3d5' }}>
                     {props.logo}
                 </a>
                 <a className='github' href={props.code_link} target='_blank'>

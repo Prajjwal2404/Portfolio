@@ -1,8 +1,9 @@
 .contact-container {
     position: relative;
     width: 100%;
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     z-index: 1;
+    margin-top: -1px;
 }
 
 .contact-container h1 {
@@ -22,7 +23,7 @@
 
 .contact-card {
     height: 26.5rem;
-    min-width: min(30rem, 95dvw);
+    min-width: min(30rem, calc(100dvw - 2rem));
     border-radius: 20px;
     padding: 2rem;
     display: flex;
@@ -105,8 +106,8 @@
 }
 
 .earth {
-    height: min(30rem, 95dvw);
-    min-width: min(30rem, 95dvw);
+    height: min(30rem, calc(100dvw - 2rem));
+    min-width: min(30rem, calc(100dvw - 2rem));
 }
 
 .earth.fade {
@@ -123,6 +124,25 @@
     }
 }
 
+@media (pointer: coarse) {
+
+    .socials a:hover,
+    .contact-card .resume:hover {
+        background-color: var(--background-color);
+    }
+
+    .socials a:active,
+    .contact-card .resume:active {
+        background-color: var(--hover-color);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .earth {
+        padding: 2rem;
+    }
+}
+
 @media screen and (max-width: 375px) {
 
     .contact-card {
@@ -131,4 +151,10 @@
         justify-content: space-between;
     }
 
+}
+
+@media screen and (max-width: 348px) {
+    .contact-card {
+        height: 24.5rem;
+    }
 }
