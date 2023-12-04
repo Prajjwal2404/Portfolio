@@ -28,16 +28,16 @@ export default function Contact({ mode, visible }) {
                 <div className='contact-card' style={{ backgroundColor: mode ? '#cacaca' : '#252525' }} ref={ref}>
                     <h1>Prajjwal Pratap Shah</h1>
                     <div className='socials'>
-                        <a href='https://www.linkedin.com/in/prajjwal2404/' target='_blank'>
+                        <a href='https://www.linkedin.com/in/prajjwal2404/' target='_blank' aria-label='linkedin'>
                             <IoLogoLinkedin />
                         </a>
-                        <a href='https://github.com/Prajjwal2404' target='_blank'>
+                        <a href='https://github.com/Prajjwal2404' target='_blank' aria-label='github'>
                             <IoLogoGithub />
                         </a>
-                        <a href='https://twitter.com/_shhhah_' target='_blank'>
+                        <a href='https://twitter.com/_shhhah_' target='_blank' aria-label='twitter'>
                             <IoLogoTwitter />
                         </a>
-                        <a href='https://www.instagram.com/_.shhhah._/' target='_blank'>
+                        <a href='https://www.instagram.com/_.shhhah._/' target='_blank' aria-label='instagram'>
                             <IoLogoInstagram />
                         </a>
                     </div>
@@ -47,7 +47,7 @@ export default function Contact({ mode, visible }) {
                         <a href='mailto:prajjwalpratapshah@outlook.com' target='_blank'>Prajjwalpratapshah@outlook.com</a>
                     </div>
                     <div className='contact-info'><IoLocation /><p>Ideal Colony,&nbsp;&nbsp;Kothrud,&nbsp;&nbsp;Pune&nbsp;&nbsp;-&nbsp;&nbsp;411038</p></div>
-                    <button onClick={() => window.open("https://drive.google.com/u/0/uc?id=190nqPgY3fJTaBiZ5zfSWR0kZcFIA5ycK&export=download", '_self')} className='resume'>DOWNLOAD RESUME</button>
+                    <button type='button' onClick={() => window.open("https://drive.google.com/u/0/uc?id=190nqPgY3fJTaBiZ5zfSWR0kZcFIA5ycK&export=download", '_self')} className='resume'>DOWNLOAD RESUME</button>
                 </div>
                 {visible && <EarthCanvas mode={mode} />}
             </div>

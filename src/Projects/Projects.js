@@ -56,11 +56,11 @@ function ProjectCard({ props, mode }) {
         <div className='project-card' style={{ backgroundColor: mode ? '#edd3c0' : '#22225D' }}>
             <div className='image-div'>
                 <img className='project-img' src={props.image} alt={props.title} />
-                <a className='logo' href={props.project_link} target='_blank'
+                <a className='logo' href={props.project_link} target='_blank' aria-label={props.title}
                     style={{ backgroundColor: mode ? '#edd3c0' : '#22225D', color: mode ? '#252c2a' : '#dad3d5' }}>
                     {props.logo}
                 </a>
-                <a className='github' href={props.code_link} target='_blank'>
+                <a className='github' href={props.code_link} target='_blank' aria-label={props.title}>
                     <FaGithub />
                 </a>
             </div>
