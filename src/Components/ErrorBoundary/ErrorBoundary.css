@@ -19,7 +19,7 @@
 .error-div button,
 .retry button {
     padding: 0.5rem 1rem;
-    border-radius: 15px;
+    border-radius: 30px;
     font-weight: bold;
     border: none;
     width: fit-content;

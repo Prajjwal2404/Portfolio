@@ -135,6 +135,14 @@
     .contact-card .resume:active {
         background-color: var(--hover-color);
     }
+
+    .email:hover {
+        text-decoration-color: transparent;
+    }
+
+    .email:active {
+        text-decoration-color: inherit;
+    }
 }
 
 @media screen and (max-width: 500px) {
