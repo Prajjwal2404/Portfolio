@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { works } from '../Info/Info'
 import { FaGithub } from "react-icons/fa"
 import { IoChevronUpOutline, IoChevronDownOutline } from "react-icons/io5";
@@ -32,9 +32,31 @@ export default function Projects({ mode }) {
         setExpanded(!expanded)
     }
 
+    useLayoutEffect(() => {
+        if (mode) ref.current.style.setProperty('--bgcolor', '#a98266')
+        else ref.current.style.setProperty('--bgcolor', '#8a82fb')
+    }, [mode])
+
+    const logoRef = useRef([])
+    const [showPulse, setShowPulse] = useState(true)
+
     const worksArr = works(mode)
 
-    const cards = worksArr.map((work, idx) => (<ProjectCard key={idx} props={work} mode={mode} />))
+    const cards = worksArr.map((work, idx) => (<ProjectCard key={idx} props={work} mode={mode} logoRef={logoRef}
+        idx={idx} pulse={pulse} pulseRemove={pulseRemove} />))
+
+    function pulse(idx) {
+        if (showPulse) {
+            logoRef.current.forEach(logo => logo.classList.remove('pulse'))
+            logoRef.current[idx].classList.add('pulse')
+        }
+    }
+
+    function pulseRemove(event) {
+        event.stopPropagation()
+        logoRef.current.forEach(logo => logo.classList.remove('pulse'))
+        setShowPulse(false)
+    }
 
     return (
         <div className='projects-container'
@@ -50,15 +72,17 @@ export default function Projects({ mode }) {
     )
 }
 
-function ProjectCard({ props, mode }) {
+function ProjectCard({ props, mode, logoRef, idx, pulse, pulseRemove }) {
     const tags = props.tags.map((tag, idx) => (<span key={idx} style={{ color: tag.color }}>#{tag.tech}</span>))
+
     return (
-        <div className='project-card' style={{ backgroundColor: mode ? '#edd3c0' : '#22225D' }}>
+        <div className='project-card' style={{ backgroundColor: mode ? '#edd3c0' : '#22225D' }} onClick={() => pulse(idx)}>
             <div className='image-div'>
                 <img className='project-img' src={props.image} alt={props.title} />
                 <a className='logo' href={props.project_link} target='_blank' aria-label={props.title}
-                    style={{ backgroundColor: mode ? '#edd3c0' : '#22225D', color: mode ? '#252c2a' : '#dad3d5' }}>
-                    {props.logo}
+                    ref={el => logoRef.current[idx] = el} onClick={pulseRemove} style={{
+                        backgroundColor: mode ? '#edd3c0' : '#22225D', color: mode ? '#252c2a' : '#dad3d5'
+                    }}>{props.logo}
                 </a>
                 <a className='github' href={props.code_link} target='_blank' aria-label={props.title}>
                     <FaGithub />
