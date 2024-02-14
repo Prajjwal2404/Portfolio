@@ -9,8 +9,6 @@ import mountain1Light from '../img/light/mountain1.png'
 import mountain2Light from '../img/light/mountain2.png'
 import mountain3Light from '../img/light/mountain3.png'
 import birdLight from '../img/light/bird.png'
-import scrollLight from '../img/gifs/scrollLight.gif'
-import scrollDark from '../img/gifs/scrollDark.gif'
 import './Hero.css'
 
 export default function Hero({ mode, setMode }) {
@@ -42,7 +40,7 @@ export default function Hero({ mode, setMode }) {
                 }
             }
             if (loaded) {
-                setTimeout(() => window.scrollTo(0, 0), 1000)
+                setTimeout(() => document.body.classList.remove('no-scroll'), 2000)
                 clearInterval(interval)
                 images.current[0].classList.add('done')
             }
@@ -69,16 +67,15 @@ export default function Hero({ mode, setMode }) {
             <div className='banner' ref={ref} style={{ backgroundColor: mode ? '#99d9eaff' : '#514c9cff' }}>
                 <img ref={el => images.current[1] = el} className='layer-1' src={backgroundLight} alt="background" />
                 <img ref={el => images.current[2] = el} className='layer-1' src={backgroundDark} style={{ opacity: mode ? 0 : 1 }} alt="background" />
-                <div className='cover' style={{ backgroundColor: mode ? '#99d9eaff' : '#514c9cff' }}></div>
-                {clickHere && <div className='popup'><p>Click here to see magic<span /></p></div>}
-                <div className='sun-moon' onClick={changeMode}
-                    style={{ backgroundColor: mode ? '#fff' : '#feff80' }}></div>
+                <div className='cover' style={{ backgroundColor: mode ? '#99d9eaff' : '#514c9cff' }} />
+                {clickHere && <div className='popup'>Click here to see magic</div>}
+                <div className='sun-moon' onClick={changeMode} style={{ backgroundColor: mode ? '#fff' : '#feff80' }} />
                 <img ref={el => images.current[3] = el} className='layer-2' src={birdLight} style={{ opacity: mode ? 1 : 0 }} alt="bird" />
                 <img ref={el => images.current[4] = el} className='layer-2' src={meteorDark} style={{ opacity: mode ? 0 : 1 }} alt="meteor" />
                 <div className='layer-3' style={{ color: mode ? '#000' : '#fff' }}>
                     <h1>Hello &amp; Welcome</h1>
                     <p>I'm Prajjwal Pratap Shah, a web developer with a BCA degree from Savitribai Phule Pune University. I love creating websites using ReactJS and other technologies. Welcome to my portfolio!</p>
-                    <img src={mode ? scrollDark : scrollLight} alt='scroll-gif' />
+                    <div className='scroll-gif' style={{ borderColor: mode ? '#000' : '#fff' }} />
                 </div>
                 <img ref={el => images.current[5] = el} className='layer-4' src={mountain1Light} style={{ opacity: mode ? 1 : 0 }} alt="mountain1" />
                 <img ref={el => images.current[6] = el} className='layer-4' src={mountain1Dark} style={{ opacity: mode ? 0 : 1 }} alt="mountain1" />

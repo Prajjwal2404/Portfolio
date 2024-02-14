@@ -16,30 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+body.no-scroll {
+  overflow-y: hidden;
+}
+
 :root {
-  font-size: 16px;
-}
-
-@media screen and (max-width: 1350px) {
-  :root {
-    font-size: 15.5px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  :root {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  :root {
-    font-size: 14.5px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  :root {
-    font-size: 14px;
-  }
+  font-size: clamp(14px, 11px + 0.3333vw, 16px);
 }

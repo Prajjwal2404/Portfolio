@@ -1,11 +1,11 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import Hero from './Hero/Hero';
-import Projects from './Projects/Projects';
-import Skills from './Skills/Skills';
-import Qualifications from './Qualifications/Qualifications';
-import Contact from './Contact/Contact';
-import StarsCanvas from './Stars/Stars';
-import ErrorBoundary from './Components/ErrorBoundary/ErrorBoundary';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import Hero from './Hero/Hero'
+import Projects from './Projects/Projects'
+import Skills from './Skills/Skills'
+import Qualifications from './Qualifications/Qualifications'
+import Contact from './Contact/Contact'
+import StarsCanvas from './Stars/Stars'
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
 
 export default function App() {
 

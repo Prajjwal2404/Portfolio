@@ -28,7 +28,7 @@ export default function BallsCanvas({ icon, mode }) {
             <div className={renderCrash ? 'low-spec' : ''}
                 style={{ backgroundColor: mode ? '#606060' : '#bababa', display: renderCrash ? 'block' : 'none' }}>
                 <img src={icon} alt='skill-icon' /></div>
-            <Canvas frameloop='demand' ref={canvasRef} style={{ display: renderCrash ? 'none' : 'block' }}>
+            <Canvas className='ball' frameloop='demand' ref={canvasRef} style={{ display: renderCrash ? 'none' : 'block' }}>
                 <Suspense fallback={<CanvasLoader />}>
                     <OrbitControls enableZoom={false} enablePan={false} />
                     <Ball img={icon} mode={mode} />

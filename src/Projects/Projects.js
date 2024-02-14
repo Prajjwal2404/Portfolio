@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { works } from '../Info/Info'
 import { FaGithub } from "react-icons/fa"
-import { IoChevronUpOutline, IoChevronDownOutline } from "react-icons/io5";
+import { IoChevronUpOutline, IoChevronDownOutline } from "react-icons/io5"
 import './Projects.css'
 
 export default function Projects({ mode }) {

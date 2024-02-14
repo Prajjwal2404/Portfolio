@@ -1,8 +1,8 @@
-import React, { Suspense, useRef, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
-import CanvasLoader from "./Loader";
+import React, { Suspense, useRef, useState } from "react"
+import { Canvas } from "@react-three/fiber"
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
+import ErrorBoundary from "../ErrorBoundary/ErrorBoundary"
+import CanvasLoader from "./Loader"
 
 export default function EarthCanvas({ mode }) {
 

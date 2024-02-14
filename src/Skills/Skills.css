@@ -1,8 +1,6 @@
 .skills-container {
-    position: relative;
     padding: 3rem 1rem;
     margin-top: -1px;
-    transition: background-image 0.5s ease;
 }
 
 .skills-container h1 {
@@ -21,6 +19,14 @@
 .skill-div {
     width: 7rem;
     height: 7rem;
+}
+
+.ball {
+    cursor: grab;
+}
+
+.ball:active {
+    cursor: grabbing;
 }
 
 .skill-div p {

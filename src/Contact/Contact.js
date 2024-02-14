@@ -41,10 +41,10 @@ export default function Contact({ mode, visible }) {
                             <IoLogoInstagram />
                         </a>
                     </div>
-                    <div className='contact-info'><IoCall /><p>+91 7355491281</p></div>
-                    <div className='contact-info email'>
+                    <div className='contact-info'><IoCall /><p>+91&nbsp;7355491281</p></div>
+                    <div className='contact-info'>
                         <IoMail />
-                        <a href='mailto:prajjwalpratapshah@outlook.com' target='_blank'>Prajjwalpratapshah@outlook.com</a>
+                        <a className='email' href='mailto:prajjwalpratapshah@outlook.com' target='_blank'>Prajjwalpratapshah@outlook.com</a>
                     </div>
                     <div className='contact-info'><IoLocation /><p>Ideal Colony,&nbsp;&nbsp;Kothrud,&nbsp;&nbsp;Pune&nbsp;&nbsp;-&nbsp;&nbsp;411038</p></div>
                     <button type='button' onClick={() => window.open("https://drive.google.com/u/0/uc?id=190nqPgY3fJTaBiZ5zfSWR0kZcFIA5ycK&export=download", '_self')} className='resume'>DOWNLOAD RESUME</button>
