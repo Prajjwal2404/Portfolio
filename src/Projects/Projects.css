@@ -6,6 +6,16 @@
     transition: background-image 0.5s ease;
 }
 
+#theme[data-mode=light] .projects-container {
+    --bg-card: #edd3c0;
+    --txt-blur: 15px;
+}
+
+#theme[data-mode=dark] .projects-container {
+    --bg-card: #22225D;
+    --txt-blur: 30px;
+}
+
 .projects-container h1 {
     text-align: center;
     margin: 2.5rem 0;
@@ -19,7 +29,6 @@
     width: 100%;
     gap: 2rem;
     overflow-y: hidden;
-    --bgcolor: transparent;
 }
 
 .projects-wrapper.less {
@@ -30,6 +39,7 @@
     width: min(21.5rem, 100%);
     height: 21rem;
     border-radius: 10px;
+    background-color: var(--bg-card);
     padding: 0.75rem;
     display: flex;
     flex-direction: column;
@@ -58,17 +68,23 @@
     opacity: 0;
     cursor: pointer;
     border-radius: 10px;
+    background-color: var(--bg-card);
     font-size: 2rem;
+    color: currentColor;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 3.25rem;
     height: 3.25rem;
-    transition: opacity 0.25s linear, filter 0.25s linear;
+    transition: opacity 0.25s linear, background-color 0.25s linear, scale 0.25s linear;
 }
 
 .logo:hover {
-    filter: brightness(80%);
+    background-color: color-mix(in lab, var(--bg-card), currentColor 15%);
+}
+
+.logo:active {
+    scale: 0.95;
 }
 
 .image-div:hover .logo {
@@ -86,15 +102,21 @@
     padding: 0.25rem;
     display: flex;
     cursor: pointer;
-    transition: filter 0.25s linear;
+    transition: transform 0.25s linear;
 }
 
 .github:hover {
-    filter: brightness(75%);
+    transform: scale(1.1);
+}
+
+.github:active {
+    transform: scale(0.95);
 }
 
 .project-card p {
+    --difference: 25%;
     font-size: 0.9rem;
+    color: var(--txt-sec);
 }
 
 .tags {
@@ -103,8 +125,9 @@
 }
 
 .tags span {
+    color: color-mix(in lab, var(--tag-color), currentColor 20%);
     font-size: 0.8rem;
-    text-shadow: 2px 2px 30px;
+    text-shadow: 0 0 var(--txt-blur) var(--bg-pri);
 }
 
 .more-btn {
@@ -114,6 +137,7 @@
     border-radius: 20px;
     font-weight: 500;
     color: inherit;
+    background-color: var(--bg-card);
     border: none;
     outline: none;
     display: flex;
@@ -121,11 +145,15 @@
     justify-content: center;
     gap: 0.5rem;
     cursor: pointer;
-    transition: filter 0.25s linear;
+    transition: background-color 0.25s linear, scale 0.25s linear;
 }
 
 .more-btn:hover {
-    filter: brightness(80%);
+    background-color: color-mix(in lab, var(--bg-card), currentColor 15%);
+}
+
+.more-btn:active {
+    scale: 0.95;
 }
 
 @media (pointer: coarse) {
@@ -145,6 +173,14 @@
         font-size: 1.4rem;
     }
 
+    #theme[data-mode=light] .logo.pulse {
+        --pulse-color: #a98266;
+    }
+
+    #theme[data-mode=dark] .logo.pulse {
+        --pulse-color: #8a82fb;
+    }
+
     .logo.pulse::before,
     .logo.pulse::after {
         content: '';
@@ -152,7 +188,7 @@
         height: 100%;
         width: 100%;
         border-radius: 50%;
-        background-color: var(--bgcolor);
+        background-color: var(--pulse-color);
         z-index: -1;
         opacity: 0.7;
     }
@@ -173,14 +209,13 @@
     }
 
     .logo:hover,
-    .github:hover,
     .more-btn:hover {
-        filter: brightness(100%);
+        background-color: var(--bg-card);
     }
 
     .logo:active,
-    .github:active,
     .more-btn:active {
-        filter: brightness(80%);
+        background-color: color-mix(in lab, var(--bg-card), currentColor 15%);
+        scale: 0.95;
     }
 }

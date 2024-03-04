@@ -25,15 +25,13 @@
     height: 26.5rem;
     min-width: min(30rem, calc(100dvw - 2rem));
     border-radius: 20px;
+    background-color: var(--bg-sec);
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: space-evenly;
     gap: 1rem;
-    --background-color: transparent;
-    --text-color: transparent;
-    --hover-color: transparent;
 }
 
 .contact-card h1 {
@@ -55,17 +53,22 @@
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 15px;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--bg-inv);
+    color: var(--bg-pri);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.75rem;
-    transition: background-color 0.25s linear;
+    transition: background-color 0.25s linear, scale 0.25s linear;
 }
 
 .socials a:hover {
-    background-color: var(--hover-color);
+    background-color: color-mix(in lab, var(--bg-inv), currentColor 20%);
+    scale: 1.05;
+}
+
+.socials a:active {
+    scale: 0.95;
 }
 
 .contact-info {
@@ -88,8 +91,8 @@
 .contact-card .resume {
     width: 100%;
     padding: 0.75rem 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--bg-inv);
+    color: var(--bg-pri);
     border: none;
     outline: none;
     border-radius: 30px;
@@ -97,11 +100,15 @@
     font-weight: 600;
     user-select: none;
     cursor: pointer;
-    transition: background-color 0.25s linear;
+    transition: background-color 0.25s linear, scale 0.25s linear;
 }
 
 .contact-card .resume:hover {
-    background-color: var(--hover-color);
+    background-color: color-mix(in lab, var(--bg-inv), currentColor 20%);
+}
+
+.contact-card .resume:active {
+    scale: 0.95;
 }
 
 .earth {
@@ -132,12 +139,14 @@
 
     .socials a:hover,
     .contact-card .resume:hover {
-        background-color: var(--background-color);
+        background-color: var(--bg-inv);
+        scale: 1;
     }
 
     .socials a:active,
     .contact-card .resume:active {
-        background-color: var(--hover-color);
+        background-color: color-mix(in lab, var(--bg-inv), currentColor 20%);
+        scale: 0.95;
     }
 
     .email:hover {

@@ -1,0 +1,12 @@
+#theme[data-mode=light] .gradient-background-div {
+    background-image: linear-gradient(#a96739 100svh, #9e9e9e, #cfcfcf, #fff);
+}
+
+#theme[data-mode=dark] .gradient-background-div {
+    background-image: linear-gradient(#1d1d4f 100svh, #242424, #121212, #000);
+}
+
+.star-contact-wrapper {
+    position: relative;
+    background-color: var(--bg-pri);
+}

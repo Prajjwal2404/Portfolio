@@ -22,7 +22,7 @@ class ErrorBoundary extends Component {
                 return (
                     <div className='retry'>
                         <h2>Failed to fetch the model!</h2>
-                        <button style={{ background: this.props.mode ? '#000' : '#fff', color: this.props.mode ? '#dadada' : '#252525' }} onClick={() => {
+                        <button onClick={() => {
                             this.setState({ hasError: false })
                             this.props.setReload(true)
                         }}>
@@ -34,7 +34,7 @@ class ErrorBoundary extends Component {
             else return (
                 <div className='error-div'>
                     <h1>Oops, something went wrong!</h1>
-                    <button style={{ background: this.props.mode ? '#000' : '#fff', color: this.props.mode ? '#dadada' : '#252525' }} onClick={() => window.location.reload()}>
+                    <button onClick={() => window.location.reload()}>
                         Refresh Page
                     </button>
                 </div>

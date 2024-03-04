@@ -14,118 +14,116 @@ import mysqlLight from '../img/icons/mysql-light.svg'
 import mysqlDark from '../img/icons/mysql-dark.svg'
 import mongodb from '../img/icons/mongodb.svg'
 import firebase from '../img/icons/firebase.svg'
-import shoestore from '../img/projects/shoe-store.png'
-import gamestore from '../img/projects/game-store.png'
-import carrent from '../img/projects/car-rent.png'
-import calculator from '../img/projects/calculator.png'
-import dashboard from '../img/projects/dashboard.png'
+import shoestore from '../img/projects/shoe-store.webp'
+import gamestore from '../img/projects/game-store.webp'
+import carrent from '../img/projects/car-rent.webp'
+import calculator from '../img/projects/calculator.webp'
+import dashboard from '../img/projects/dashboard.webp'
 import { GiRunningShoe } from "react-icons/gi"
 import { IoGameController, IoCar } from "react-icons/io5"
 import { ImCalculator } from "react-icons/im"
 import { BiSolidDashboard } from "react-icons/bi"
 
-export function works(mode) {
-    return [
-        {
-            title: 'Shoe Store',
-            description: 'An Ecommerce website for selling footwear online made using ReactJS.',
-            tags: [
-                {
-                    tech: 'ReactJS',
-                    color: mode ? '#3e92a9' : '#61DAFB'
-                },
-                {
-                    tech: 'JavaScript',
-                    color: mode ? '#cc9b1f' : '#f1e05a'
-                },
-                {
-                    tech: 'Firestore',
-                    color: '#E52B50'
-                }
-            ],
-            image: shoestore,
-            logo: <GiRunningShoe />,
-            code_link: 'https://github.com/Prajjwal2404/Shoe-Store',
-            project_link: 'https://shoe-store-160b2.firebaseapp.com/'
-        },
-        {
-            title: 'Game Store',
-            description: 'A digital games selling website made using vanilla HTML, CSS and PHP.',
-            tags: [
-                {
-                    tech: 'PHP',
-                    color: 'darkviolet'
-                },
-                {
-                    tech: 'MySQL',
-                    color: 'darkorange'
-                },
-                {
-                    tech: 'CSS',
-                    color: '#254bdd'
-                }
-            ],
-            image: gamestore,
-            logo: <IoGameController />,
-            code_link: 'https://github.com/Prajjwal2404/Game-Store',
-            project_link: 'https://webgamestore.000webhostapp.com/'
-        },
-        {
-            title: 'Car Rent',
-            description: 'A Car renting website made using vanilla HTML, CSS, PHP and JavaScript.',
-            tags: [
-                {
-                    tech: 'PHP',
-                    color: 'darkviolet'
-                },
-                {
-                    tech: 'MySQL',
-                    color: 'darkorange'
-                }
-            ],
-            image: carrent,
-            logo: <IoCar />,
-            code_link: 'https://github.com/Prajjwal2404/Car-Rent',
-            project_link: 'https://webcarrent.000webhostapp.com/'
-        },
-        {
-            title: 'Scientific Calculator',
-            description: 'An android scientific calculator app made in Android Studio',
-            tags: [
-                {
-                    tech: 'Android Studio',
-                    color: mode ? 'green' : 'lawngreen'
-                },
-                {
-                    tech: 'Java',
-                    color: '#b07219'
-                }
-            ],
-            image: calculator,
-            logo: <ImCalculator style={{ borderRadius: window.matchMedia('(pointer: coarse)').matches ? '35%' : '0' }} />,
-            code_link: 'https://github.com/Prajjwal2404/Calculator',
-            project_link: 'https://play.google.com/store/apps/details?id=com.prajjwal.calculator'
-        },
-        {
-            title: 'Dashboard',
-            description: 'A fully responsive UI/UX of a dashboard Page made using ReactJS',
-            tags: [
-                {
-                    tech: 'ReactJS',
-                    color: mode ? '#3e92a9' : '#61DAFB'
-                },
-                {
-                    tech: 'CSS',
-                    color: '#254bdd'
-                }
-            ],
-            image: dashboard,
-            logo: <BiSolidDashboard />,
-            code_link: 'https://github.com/Prajjwal2404/Dashboard',
-            project_link: 'https://webreactdashboard.netlify.app/'
-        }
-    ]
-}
+export const works = [
+    {
+        title: 'Shoe Store',
+        description: 'An Ecommerce website for selling footwear online made using ReactJS.',
+        tags: [
+            {
+                tech: 'ReactJS',
+                color: 'turquoise'
+            },
+            {
+                tech: 'JavaScript',
+                color: 'gold'
+            },
+            {
+                tech: 'Firestore',
+                color: 'red'
+            }
+        ],
+        image: shoestore,
+        logo: <GiRunningShoe />,
+        code_link: 'https://github.com/Prajjwal2404/Shoe-Store',
+        project_link: 'https://shoe-store-160b2.firebaseapp.com/'
+    },
+    {
+        title: 'Game Store',
+        description: 'A digital games selling website made using vanilla HTML, CSS and PHP.',
+        tags: [
+            {
+                tech: 'PHP',
+                color: 'violet'
+            },
+            {
+                tech: 'MySQL',
+                color: 'orange'
+            },
+            {
+                tech: 'CSS',
+                color: 'blue'
+            }
+        ],
+        image: gamestore,
+        logo: <IoGameController />,
+        code_link: 'https://github.com/Prajjwal2404/Game-Store',
+        project_link: 'https://webgamestore.000webhostapp.com/'
+    },
+    {
+        title: 'Car Rent',
+        description: 'A Car renting website made using vanilla HTML, CSS, PHP and JavaScript.',
+        tags: [
+            {
+                tech: 'PHP',
+                color: 'violet'
+            },
+            {
+                tech: 'MySQL',
+                color: 'orange'
+            }
+        ],
+        image: carrent,
+        logo: <IoCar />,
+        code_link: 'https://github.com/Prajjwal2404/Car-Rent',
+        project_link: 'https://webcarrent.000webhostapp.com/'
+    },
+    {
+        title: 'Scientific Calculator',
+        description: 'An android scientific calculator app made in Android Studio',
+        tags: [
+            {
+                tech: 'Android Studio',
+                color: 'mediumseagreen'
+            },
+            {
+                tech: 'Java',
+                color: 'salmon'
+            }
+        ],
+        image: calculator,
+        logo: <ImCalculator style={{ borderRadius: window.matchMedia('(pointer: coarse)').matches ? '35%' : '0' }} />,
+        code_link: 'https://github.com/Prajjwal2404/Calculator',
+        project_link: 'https://play.google.com/store/apps/details?id=com.prajjwal.calculator'
+    },
+    {
+        title: 'Dashboard',
+        description: 'A fully responsive UI/UX of a dashboard Page made using ReactJS',
+        tags: [
+            {
+                tech: 'ReactJS',
+                color: 'turquoise'
+            },
+            {
+                tech: 'CSS',
+                color: 'blue'
+            }
+        ],
+        image: dashboard,
+        logo: <BiSolidDashboard />,
+        code_link: 'https://github.com/Prajjwal2404/Dashboard',
+        project_link: 'https://webreactdashboard.netlify.app/'
+    }
+]
 
 export function technologies(mode) {
 

@@ -1,11 +1,12 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import Hero from './Hero/Hero'
-import Projects from './Projects/Projects'
-import Skills from './Skills/Skills'
-import Qualifications from './Qualifications/Qualifications'
-import Contact from './Contact/Contact'
-import StarsCanvas from './Stars/Stars'
-import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
+import Hero from '../Hero/Hero'
+import Projects from '../Projects/Projects'
+import Skills from '../Skills/Skills'
+import Qualifications from '../Qualifications/Qualifications'
+import Contact from '../Contact/Contact'
+import StarsCanvas from '../Stars/Stars'
+import './App.css'
 
 export default function App() {
 
@@ -40,15 +41,16 @@ export default function App() {
   useEffect(() => intersecting.education || intersecting.contact ? setVisible(true) : setVisible(false), [intersecting])
 
   return (
-    <div className="App">
-      <ErrorBoundary mode={mode}>
-        <Hero mode={mode} setMode={setMode} />
-        <Projects mode={mode} />
-        <Skills mode={mode} />
-        <Qualifications mode={mode} refEl={ref} intersecting={intersecting.education} />
-        <div style={{ position: 'relative', backgroundColor: mode ? '#fff' : '#000' }}
-          ref={el => ref.current[1] = el}>
-          <Contact mode={mode} visible={visible} />
+    <div id='theme' data-mode={mode ? 'light' : 'dark'}>
+      <ErrorBoundary>
+        <div className='gradient-background-div'>
+          <Hero mode={mode} setMode={setMode} />
+          <Projects />
+          <Skills mode={mode} />
+          <Qualifications refEl={ref} intersecting={intersecting.education} />
+        </div>
+        <div ref={el => ref.current[1] = el} className='star-contact-wrapper'>
+          <Contact visible={visible} />
           {visible && <StarsCanvas mode={mode} />}
         </div>
       </ErrorBoundary>

@@ -1,14 +1,14 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import backgroundDark from '../img/dark/background.png'
-import mountain1Dark from '../img/dark/mountain1.png'
-import mountain2Dark from '../img/dark/mountain2.png'
-import mountain3Dark from '../img/dark/mountain3.png'
-import meteorDark from '../img/dark/meteor.png'
-import backgroundLight from '../img/light/background.png'
-import mountain1Light from '../img/light/mountain1.png'
-import mountain2Light from '../img/light/mountain2.png'
-import mountain3Light from '../img/light/mountain3.png'
-import birdLight from '../img/light/bird.png'
+import backgroundDark from '../img/dark/background.webp'
+import mountain1Dark from '../img/dark/mountain1.webp'
+import mountain2Dark from '../img/dark/mountain2.webp'
+import mountain3Dark from '../img/dark/mountain3.webp'
+import meteorDark from '../img/dark/meteor.webp'
+import backgroundLight from '../img/light/background.webp'
+import mountain1Light from '../img/light/mountain1.webp'
+import mountain2Light from '../img/light/mountain2.webp'
+import mountain3Light from '../img/light/mountain3.webp'
+import birdLight from '../img/light/bird.webp'
 import './Hero.css'
 
 export default function Hero({ mode, setMode }) {
@@ -17,7 +17,7 @@ export default function Hero({ mode, setMode }) {
     const [clickHere, setClickHere] = useState(false)
 
     useEffect(() => {
-        if (!getCookie()) setClickHere(true)
+        if (!localStorage.getItem('visited')) setClickHere(true)
     }, [])
 
     useEffect(() => {
@@ -55,27 +55,26 @@ export default function Hero({ mode, setMode }) {
         setTimeout(() => setMode(!mode), 1000)
         setTimeout(() => event.target.classList.remove('change'), 2000)
         if (clickHere) {
-            setCookie()
+            localStorage.setItem('visited', '1')
             setClickHere(false)
         }
     }
 
     return (
         <>
-            <div ref={el => images.current[0] = el} className='loader' style={{ backgroundColor: mode ? '#fff' : '#000' }}>
-                <p>Loading</p><div className='loading' style={{ backgroundColor: mode ? '#000' : '#fff' }} /></div>
-            <div className='banner' ref={ref} style={{ backgroundColor: mode ? '#99d9eaff' : '#514c9cff' }}>
+            <div ref={el => images.current[0] = el} className='loader'><p>Loading</p><div className='loading' /></div>
+            <div className='banner' ref={ref}>
                 <img ref={el => images.current[1] = el} className='layer-1' src={backgroundLight} alt="background" />
                 <img ref={el => images.current[2] = el} className='layer-1' src={backgroundDark} style={{ opacity: mode ? 0 : 1 }} alt="background" />
-                <div className='cover' style={{ backgroundColor: mode ? '#99d9eaff' : '#514c9cff' }} />
+                <div className='cover' />
                 {clickHere && <div className='popup'>Click here to see magic</div>}
-                <div className='sun-moon' onClick={changeMode} style={{ backgroundColor: mode ? '#fff' : '#feff80' }} />
+                <div className='sun-moon' onClick={changeMode} />
                 <img ref={el => images.current[3] = el} className='layer-2' src={birdLight} style={{ opacity: mode ? 1 : 0 }} alt="bird" />
                 <img ref={el => images.current[4] = el} className='layer-2' src={meteorDark} style={{ opacity: mode ? 0 : 1 }} alt="meteor" />
-                <div className='layer-3' style={{ color: mode ? '#000' : '#fff' }}>
+                <div className='layer-3'>
                     <h1>Hello &amp; Welcome</h1>
                     <p>I'm Prajjwal Pratap Shah, a web developer with a BCA degree from Savitribai Phule Pune University. I love creating websites using ReactJS and other technologies. Welcome to my portfolio!</p>
-                    <div className='scroll-gif' style={{ borderColor: mode ? '#000' : '#fff' }} />
+                    <div className='scroll-gif' />
                 </div>
                 <img ref={el => images.current[5] = el} className='layer-4' src={mountain1Light} style={{ opacity: mode ? 1 : 0 }} alt="mountain1" />
                 <img ref={el => images.current[6] = el} className='layer-4' src={mountain1Dark} style={{ opacity: mode ? 0 : 1 }} alt="mountain1" />
@@ -86,19 +85,4 @@ export default function Hero({ mode, setMode }) {
             </div>
         </>
     )
-}
-
-function setCookie() {
-    const date = new Date()
-    date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000))
-    const expires = date.toUTCString()
-    document.cookie = 'visited=1; expires=' + expires + '; path=/'
-}
-
-function getCookie() {
-    const cookies = document.cookie.split('; ')
-    for (let i = 0; i < cookies.length; i++) {
-        if (cookies[i].startsWith('visited=')) return true
-    }
-    return false
 }

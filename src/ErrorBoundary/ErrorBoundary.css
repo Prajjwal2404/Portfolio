@@ -20,11 +20,13 @@
 .retry button {
     padding: 0.5rem 1rem;
     border-radius: 30px;
+    background-color: var(--bg-inv);
+    color: var(--bg-pri);
     font-weight: bold;
     border: none;
     width: fit-content;
     cursor: pointer;
-    transition: filter 0.25s linear;
+    transition: scale 0.25s linear;
 }
 
 .retry {
@@ -45,20 +47,7 @@
     font-size: 1rem;
 }
 
-.error-div button:hover,
-.retry button:hover {
-    filter: brightness(80%);
-}
-
-@media (pointer: coarse) {
-
-    .error-div button:hover,
-    .retry button:hover {
-        filter: brightness(100%);
-    }
-
-    .error-div button:active,
-    .retry button:active {
-        filter: brightness(80%);
-    }
+.error-div button:active,
+.retry button:active {
+    scale: 0.95;
 }

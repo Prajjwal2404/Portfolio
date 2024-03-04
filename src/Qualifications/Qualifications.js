@@ -2,22 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react'
 import { experiences } from '../Info/Info'
 import './Qualifications.css'
 
-export default function Qualifications({ mode, refEl, intersecting }) {
-
-    useLayoutEffect(() => refEl.current[0].style.setProperty('--time', `${experiences.length}s`), [])
-
-    useLayoutEffect(() => {
-        if (mode) {
-            refEl.current[0].style.setProperty('--timeline', '#353535')
-            refEl.current[0].style.setProperty('--textbox', '#cacaca')
-            refEl.current[0].style.setProperty('--small', '#454545')
-        }
-        else {
-            refEl.current[0].style.setProperty('--timeline', '#fff')
-            refEl.current[0].style.setProperty('--textbox', '#252525')
-            refEl.current[0].style.setProperty('--small', '#ccc')
-        }
-    }, [mode])
+export default function Qualifications({ refEl, intersecting }) {
 
     const ref = useRef([])
 
@@ -51,10 +36,9 @@ export default function Qualifications({ mode, refEl, intersecting }) {
     ))
 
     return (
-        <div className='qualifications-container'
-            style={{ backgroundImage: mode ? 'linear-gradient(#ccc, #fff)' : 'linear-gradient(#101010, #000)' }}>
-            <h1 style={{ color: mode ? '#000' : '#fff' }}>Education</h1>
-            <div className="timeline" ref={el => refEl.current[0] = el} style={{ color: mode ? '#252525' : '#fff' }}>
+        <div className='qualifications-container'>
+            <h1>Education</h1>
+            <div className="timeline" ref={el => refEl.current[0] = el} style={{ '--time': `${experiences.length}s` }}>
                 {experiencesArr}
             </div>
         </div>

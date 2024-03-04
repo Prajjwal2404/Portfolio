@@ -22,4 +22,20 @@ body.no-scroll {
 
 :root {
   font-size: clamp(14px, 11px + 0.3333vw, 16px);
+  --difference: 20%;
+  --txt-sec: color-mix(in lab, currentColor, var(--bg-pri) var(--difference))
+}
+
+:root:has(#theme[data-mode=light]) {
+  color-scheme: light;
+  --bg-pri: #fff;
+  --bg-sec: #cfcfcf;
+  --bg-inv: #000
+}
+
+:root:has(#theme[data-mode=dark]) {
+  color-scheme: dark;
+  --bg-pri: #000;
+  --bg-sec: #252525;
+  --bg-inv: #fff
 }

@@ -13,10 +13,7 @@
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    --time: 0;
-    --timeline: transparent;
-    --textbox: transparent;
-    --small: transparent;
+    --difference: 10%;
 }
 
 .timeline::after {
@@ -24,7 +21,7 @@
     position: absolute;
     width: 5px;
     height: 0;
-    background-color: var(--timeline);
+    background-color: var(--txt-sec);
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -70,7 +67,7 @@
     right: -1rem;
     top: 2rem;
     z-index: 10;
-    background-color: var(--timeline);
+    background-color: var(--txt-sec);
 }
 
 .right-container .middle-circle {
@@ -79,7 +76,7 @@
 
 .textbox {
     padding: 1.25rem 2rem;
-    background-color: var(--textbox);
+    background-color: var(--bg-sec);
     position: relative;
     border-radius: 10px;
     opacity: 0;
@@ -107,7 +104,7 @@
     justify-content: space-between;
     gap: 1rem;
     font-weight: 400;
-    color: var(--small);
+    color: var(--txt-sec);
 }
 
 .textbox .time-place {
@@ -123,7 +120,7 @@
     top: 1.4rem;
     border-top: 1rem solid transparent;
     border-bottom: 1rem solid transparent;
-    border-left: 1rem solid var(--textbox);
+    border-left: 1rem solid var(--bg-sec);
     right: calc(-1rem + 1px);
 }
 
@@ -132,7 +129,7 @@
     top: 1.4rem;
     border-top: 1rem solid transparent;
     border-bottom: 1rem solid transparent;
-    border-right: 1rem solid var(--textbox);
+    border-right: 1rem solid var(--bg-sec);
     left: calc(-1rem + 1px);
 }
 
@@ -164,7 +161,7 @@
 
     .left-arrow,
     .right-arrow {
-        border-right: 1rem solid var(--textbox);
+        border-right: 1rem solid var(--bg-sec);
         border-left: none;
         left: calc(-1rem + 1px);
         right: unset;
