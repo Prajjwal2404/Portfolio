@@ -44,7 +44,7 @@ export default function App() {
     <div id='theme' data-mode={mode ? 'light' : 'dark'}>
       <ErrorBoundary>
         <div className='gradient-background-div'>
-          <Hero mode={mode} setMode={setMode} />
+          <Hero setMode={setMode} />
           <Projects />
           <Skills mode={mode} />
           <Qualifications refEl={ref} intersecting={intersecting.education} />

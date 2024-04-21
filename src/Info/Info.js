@@ -3,28 +3,52 @@ import reactDark from '../img/icons/react-dark.svg'
 import threeLight from '../img/icons/threejs-light.svg'
 import threeDark from '../img/icons/threejs-dark.svg'
 import javascript from '../img/icons/javascript.svg'
+import reactRouterLight from '../img/icons/reactrouter-light.svg'
+import reactRouterDark from '../img/icons/reactrouter-dark.svg'
 import php from '../img/icons/php.svg'
 import css from '../img/icons/css.svg'
 import html from '../img/icons/html.svg'
 import java from '../img/icons/java.svg'
 import androidstudio from '../img/icons/androidstudio.svg'
 import python from '../img/icons/python.svg'
-import git from '../img/icons/git.svg'
 import mysqlLight from '../img/icons/mysql-light.svg'
 import mysqlDark from '../img/icons/mysql-dark.svg'
 import mongodb from '../img/icons/mongodb.svg'
 import firebase from '../img/icons/firebase.svg'
+import oatmilk from '../img/projects/oatmilk.webp'
 import shoestore from '../img/projects/shoe-store.webp'
 import gamestore from '../img/projects/game-store.webp'
-import carrent from '../img/projects/car-rent.webp'
 import calculator from '../img/projects/calculator.webp'
 import dashboard from '../img/projects/dashboard.webp'
+import Oatmilk from '../img/icons/Oatmilk'
 import { GiRunningShoe } from "react-icons/gi"
-import { IoGameController, IoCar } from "react-icons/io5"
+import { IoGameController } from "react-icons/io5"
 import { ImCalculator } from "react-icons/im"
 import { BiSolidDashboard } from "react-icons/bi"
 
 export const works = [
+    {
+        title: 'Oats by Nush',
+        description: 'Product and Ecommerce website of Nush Oats Pvt. Ltd.',
+        tags: [
+            {
+                tech: 'ReactJS',
+                color: 'turquoise'
+            },
+            {
+                tech: 'Firebase',
+                color: 'red'
+            },
+            {
+                tech: 'Framer Motion',
+                color: 'mediumseagreen'
+            }
+        ],
+        image: oatmilk,
+        logo: <Oatmilk />,
+        code_link: 'https://github.com/Prajjwal2404/OatMilk',
+        project_link: 'https://oatsbynush.com'
+    },
     {
         title: 'Shoe Store',
         description: 'An Ecommerce website for selling footwear online made using ReactJS.',
@@ -70,22 +94,22 @@ export const works = [
         project_link: 'https://webgamestore.000webhostapp.com/'
     },
     {
-        title: 'Car Rent',
-        description: 'A Car renting website made using vanilla HTML, CSS, PHP and JavaScript.',
+        title: 'Dashboard',
+        description: 'A fully responsive UI/UX of a dashboard Page made using ReactJS',
         tags: [
             {
-                tech: 'PHP',
-                color: 'violet'
+                tech: 'ReactJS',
+                color: 'turquoise'
             },
             {
-                tech: 'MySQL',
-                color: 'orange'
+                tech: 'CSS',
+                color: 'blue'
             }
         ],
-        image: carrent,
-        logo: <IoCar />,
-        code_link: 'https://github.com/Prajjwal2404/Car-Rent',
-        project_link: 'https://webcarrent.000webhostapp.com/'
+        image: dashboard,
+        logo: <BiSolidDashboard />,
+        code_link: 'https://github.com/Prajjwal2404/Dashboard',
+        project_link: 'https://webreactdashboard.netlify.app/'
     },
     {
         title: 'Scientific Calculator',
@@ -104,24 +128,6 @@ export const works = [
         logo: <ImCalculator style={{ borderRadius: window.matchMedia('(pointer: coarse)').matches ? '35%' : '0' }} />,
         code_link: 'https://github.com/Prajjwal2404/Calculator',
         project_link: 'https://play.google.com/store/apps/details?id=com.prajjwal.calculator'
-    },
-    {
-        title: 'Dashboard',
-        description: 'A fully responsive UI/UX of a dashboard Page made using ReactJS',
-        tags: [
-            {
-                tech: 'ReactJS',
-                color: 'turquoise'
-            },
-            {
-                tech: 'CSS',
-                color: 'blue'
-            }
-        ],
-        image: dashboard,
-        logo: <BiSolidDashboard />,
-        code_link: 'https://github.com/Prajjwal2404/Dashboard',
-        project_link: 'https://webreactdashboard.netlify.app/'
     }
 ]
 
@@ -131,6 +137,10 @@ export function technologies(mode) {
         {
             name: 'ReactJS',
             icon: mode ? reactLight : reactDark
+        },
+        {
+            name: 'React Router',
+            icon: mode ? reactRouterLight : reactRouterDark
         },
         {
             name: 'ThreeJS',
@@ -165,10 +175,6 @@ export function technologies(mode) {
             icon: python
         },
         {
-            name: 'Git',
-            icon: git
-        },
-        {
             name: 'MySQL',
             icon: mode ? mysqlLight : mysqlDark
         },
@@ -177,7 +183,7 @@ export function technologies(mode) {
             icon: mongodb
         },
         {
-            name: 'Firestore',
+            name: 'Firebase',
             icon: firebase
         }
     ]

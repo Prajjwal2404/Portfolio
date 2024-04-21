@@ -76,7 +76,7 @@
     justify-content: center;
     width: 3.25rem;
     height: 3.25rem;
-    transition: opacity 0.25s linear, background-color 0.25s linear, scale 0.25s linear;
+    transition: opacity 0.25s linear, background-color 0.25s linear, transform 0.25s linear;
 }
 
 .logo:hover {
@@ -84,7 +84,7 @@
 }
 
 .logo:active {
-    scale: 0.95;
+    transform: translate(-50%, -50%) scale(0.95);
 }
 
 .image-div:hover .logo {
@@ -145,7 +145,7 @@
     justify-content: center;
     gap: 0.5rem;
     cursor: pointer;
-    transition: background-color 0.25s linear, scale 0.25s linear;
+    transition: background-color 0.25s linear, transform 0.25s linear;
 }
 
 .more-btn:hover {
@@ -153,7 +153,7 @@
 }
 
 .more-btn:active {
-    scale: 0.95;
+    transform: scale(0.95);
 }
 
 @media (pointer: coarse) {
@@ -216,6 +216,14 @@
     .logo:active,
     .more-btn:active {
         background-color: color-mix(in lab, var(--bg-card), currentColor 15%);
-        scale: 0.95;
+        transform: translate(0, 0) scale(0.95);
+    }
+
+    .github:hover {
+        transform: scale(1);
+    }
+
+    .github:active {
+        transform: scale(0.95);
     }
 }

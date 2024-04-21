@@ -26,12 +26,12 @@ export default function Contact({ visible }) {
                         </a>
                     </div>
                     <div className='contact-info'><IoCall /><p>+91&nbsp;7355491281</p></div>
+                    <div className='contact-info'><IoLocation /><p>Kothrud,&nbsp;&nbsp;Pune&nbsp;&nbsp;-&nbsp;&nbsp;411038</p></div>
                     <div className='contact-info'>
                         <IoMail />
                         <a className='email' href='mailto:prajjwalpratapshah@outlook.com' target='_blank'>Prajjwalpratapshah@outlook.com</a>
                     </div>
-                    <div className='contact-info'><IoLocation /><p>Ideal Colony,&nbsp;&nbsp;Kothrud,&nbsp;&nbsp;Pune&nbsp;&nbsp;-&nbsp;&nbsp;411038</p></div>
-                    <button type='button' onClick={() => window.open("https://drive.google.com/u/0/uc?id=190nqPgY3fJTaBiZ5zfSWR0kZcFIA5ycK&export=download", '_self')} className='resume'>DOWNLOAD RESUME</button>
+                    <button type='button' onClick={() => window.open("https://firebasestorage.googleapis.com/v0/b/shoe-store-160b2.appspot.com/o/resume%2FPrajjwal's%20Resume.pdf?alt=media&token=7ed6b079-dbe2-430c-9b2c-3015bc81f28f", '_self')} className='resume'>DOWNLOAD RESUME</button>
                 </div>
                 {visible && <EarthCanvas />}
             </div>

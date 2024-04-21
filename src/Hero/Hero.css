@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
+    transition: opacity 1s linear 1s;
 }
 
 .loader p {
@@ -23,33 +24,20 @@
     padding: 0.25rem;
     border-radius: 50%;
     background-color: currentColor;
-    transition: filter 1s linear;
     animation: blink 2s linear infinite;
+    transition: opacity 1s linear;
 }
 
 @keyframes blink {
     50% {
-        opacity: 0;
+        filter: opacity(0);
     }
 }
 
-.loader.done p {
-    opacity: 0;
-}
-
+.loader.done,
+.loader.done p,
 .loader.done .loading {
-    filter: opacity(0);
-}
-
-.loader.done {
-    animation: loaded 1s ease-out 1s forwards;
-}
-
-@keyframes loaded {
-    100% {
-        opacity: 0;
-        display: none;
-    }
+    opacity: 0;
 }
 
 .banner {
@@ -65,11 +53,15 @@
 #theme[data-mode=light] .banner {
     --bg-banner: #99d9ea;
     --bg-sun-moon: #fff;
+    --bg-opacity-light: 1;
+    --bg-opacity-dark: 0;
 }
 
 #theme[data-mode=dark] .banner {
     --bg-banner: #514c9c;
     --bg-sun-moon: #feff80;
+    --bg-opacity-light: 0;
+    --bg-opacity-dark: 1;
 }
 
 .banner img {
@@ -77,6 +69,14 @@
     bottom: 0;
     width: 100%;
     transition: opacity 0.5s ease;
+}
+
+.banner img.light {
+    opacity: var(--bg-opacity-light);
+}
+
+.banner img.dark {
+    opacity: var(--bg-opacity-dark);
 }
 
 .cover {
