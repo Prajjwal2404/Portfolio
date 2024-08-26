@@ -15,7 +15,6 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap-reverse;
     gap: 1rem;
     width: 100%;
     padding: 2.5rem 1rem;
@@ -154,6 +153,13 @@
 
     .email:active {
         text-decoration-color: inherit;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact-wrapper {
+        flex-direction: column-reverse;
+        justify-content: center;
     }
 }
 

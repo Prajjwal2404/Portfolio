@@ -5,6 +5,7 @@ import Projects from '../Projects/Projects'
 import Skills from '../Skills/Skills'
 import Qualifications from '../Qualifications/Qualifications'
 import Contact from '../Contact/Contact'
+import { EarthLoader } from '../Components/EarthCanvas'
 import StarsCanvas from '../Stars/Stars'
 import './App.css'
 
@@ -19,6 +20,11 @@ export default function App() {
     }
     check.addEventListener('change', change)
     return () => check.removeEventListener('change', change)
+  }, [])
+
+  useEffect(() => {
+    const preLoad = async () => EarthLoader()
+    preLoad().catch(() => { })
   }, [])
 
   const ref = useRef([])

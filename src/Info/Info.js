@@ -20,7 +20,7 @@ import shoestore from '../img/projects/shoe-store.webp'
 import gamestore from '../img/projects/game-store.webp'
 import calculator from '../img/projects/calculator.webp'
 import dashboard from '../img/projects/dashboard.webp'
-import Oatmilk from '../img/icons/Oatmilk'
+import { ReactComponent as Oatmilk } from '../img/icons/oatmilk.svg'
 import { GiRunningShoe } from "react-icons/gi"
 import { IoGameController } from "react-icons/io5"
 import { ImCalculator } from "react-icons/im"

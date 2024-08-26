@@ -26,16 +26,19 @@ export default function EarthCanvas() {
 
 function Earth({ rel, reload, setReload }) {
 
-  const url = "./planet/scene.gltf"
+  const scene = EarthLoader()
 
   if (reload) {
-    useGLTF.clear(url)
+    useGLTF.clear("./planet/scene.gltf")
     setReload(false)
   }
-
-  const { scene } = useGLTF(url)
 
   scene.onAfterRender(rel.current?.classList.add('fade'))
 
   return <primitive object={scene} scale={3} position-y={0} rotation-y={0} />
+}
+
+export function EarthLoader() {
+  const { scene } = useGLTF("./planet/scene.gltf")
+  return scene
 }

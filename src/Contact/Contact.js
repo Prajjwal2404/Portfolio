@@ -31,7 +31,7 @@ export default function Contact({ visible }) {
                         <IoMail />
                         <a className='email' href='mailto:prajjwalpratapshah@outlook.com' target='_blank'>Prajjwalpratapshah@outlook.com</a>
                     </div>
-                    <button type='button' onClick={() => window.open("https://firebasestorage.googleapis.com/v0/b/shoe-store-160b2.appspot.com/o/resume%2FPrajjwal's%20Resume.pdf?alt=media&token=7ed6b079-dbe2-430c-9b2c-3015bc81f28f", '_self')} className='resume'>DOWNLOAD RESUME</button>
+                    <button type='button' onClick={() => window.open("https://firebasestorage.googleapis.com/v0/b/shoe-store-160b2.appspot.com/o/resume%2FMy%20Resume.pdf?alt=media&token=3ca96dc9-1cdb-4d4c-ad9d-0cd9a3cc47ae", '_self')} className='resume'>DOWNLOAD RESUME</button>
                 </div>
                 {visible && <EarthCanvas />}
             </div>
