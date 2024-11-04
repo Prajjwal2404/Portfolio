@@ -45,20 +45,17 @@
     height: calc(100svh + 1px);
     position: relative;
     overflow: hidden;
-    background-color: var(--bg-banner);
     transition: background-color 0.5s ease;
     --scrollY: 0px;
 }
 
 #theme[data-mode=light] .banner {
-    --bg-banner: #99d9ea;
     --bg-sun-moon: #fff;
     --bg-opacity-light: 1;
     --bg-opacity-dark: 0;
 }
 
 #theme[data-mode=dark] .banner {
-    --bg-banner: #514c9c;
     --bg-sun-moon: #feff80;
     --bg-opacity-light: 0;
     --bg-opacity-dark: 1;
@@ -79,15 +76,21 @@
     opacity: var(--bg-opacity-dark);
 }
 
-.cover {
+.bg-light,
+.bg-dark {
     position: absolute;
-    bottom: 56dvw;
     width: 100%;
-    height: 3px;
-    background-color: var(--bg-banner);
-    pointer-events: none;
-    transform: translateY(calc(min(var(--scrollY), 100svh) / 1.5));
-    transition: background-color 0.5s ease;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.bg-light {
+    background-color: #99d9ea
+}
+
+.bg-dark {
+    background-color: #514c9c;
+    opacity: var(--bg-opacity-dark);
 }
 
 .layer-3 {

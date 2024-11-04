@@ -21,7 +21,7 @@
 }
 
 .contact-card {
-    width: min(30rem, calc(100dvw - 2rem));
+    width: min(30rem, calc(100dvw - 2.5rem));
     border-radius: 20px;
     background-color: var(--bg-sec);
     padding: 2.5rem 2rem;

@@ -1,12 +1,14 @@
-import { useState, useRef, Suspense } from "react"
+import { useState, useRef, Suspense, useContext } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { Points, PointMaterial, Preload } from "@react-three/drei"
 import * as random from "maath/random/dist/maath-random.esm"
+import useMode from "../Components/Mode"
 import './Stars.css'
 
-export default function StarsCanvas({ mode }) {
+export default function StarsCanvas() {
 
   const ref = useRef()
+  const { mode } = useContext(useMode)
 
   return (
     <div className="star" ref={ref}>

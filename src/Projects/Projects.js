@@ -9,17 +9,13 @@ export default function Projects() {
     const ref = useRef()
     const [showMore, setShowMore] = useState(window.innerWidth < 659)
     const [expanded, setExpanded] = useState(false)
-    const [width, setWidth] = useState(null)
 
     useEffect(() => {
         function collapse() {
-            if (window.innerWidth !== width) {
-                setWidth(window.innerWidth)
-                if (window.innerWidth < 659) setShowMore(true)
-                else {
-                    setShowMore(false)
-                    setExpanded(false)
-                }
+            if (window.innerWidth < 659) setShowMore(true)
+            else {
+                setShowMore(false)
+                setExpanded(false)
             }
         }
         window.addEventListener('resize', collapse)

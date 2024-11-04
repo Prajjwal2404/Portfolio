@@ -1,20 +1,22 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import backgroundDark from '../img/dark/background.webp'
-import mountain1Dark from '../img/dark/mountain1.webp'
-import mountain2Dark from '../img/dark/mountain2.webp'
-import mountain3Dark from '../img/dark/mountain3.webp'
-import meteorDark from '../img/dark/meteor.webp'
-import backgroundLight from '../img/light/background.webp'
-import mountain1Light from '../img/light/mountain1.webp'
-import mountain2Light from '../img/light/mountain2.webp'
-import mountain3Light from '../img/light/mountain3.webp'
-import birdLight from '../img/light/bird.webp'
+import React, { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import useMode from '../Components/Mode'
+import backgroundDark from '../Img/dark/background.webp'
+import mountain1Dark from '../Img/dark/mountain1.webp'
+import mountain2Dark from '../Img/dark/mountain2.webp'
+import mountain3Dark from '../Img/dark/mountain3.webp'
+import meteorDark from '../Img/dark/meteor.webp'
+import backgroundLight from '../Img/light/background.webp'
+import mountain1Light from '../Img/light/mountain1.webp'
+import mountain2Light from '../Img/light/mountain2.webp'
+import mountain3Light from '../Img/light/mountain3.webp'
+import birdLight from '../Img/light/bird.webp'
 import './Hero.css'
 
-export default function Hero({ setMode }) {
+export default function Hero() {
 
     const ref = useRef()
     const [clickHere, setClickHere] = useState(false)
+    const { setMode } = useContext(useMode)
 
     useEffect(() => {
         if (!localStorage.getItem('visited')) setClickHere(true)
@@ -62,9 +64,12 @@ export default function Hero({ setMode }) {
         <>
             <div ref={loaderRef} className='loader'><p>Loading</p><div className='loading' /></div>
             <div className='banner' ref={ref}>
-                <img ref={el => imagesRef.current[0] = el} className='layer-1' src={backgroundLight} alt="background" />
-                <img ref={el => imagesRef.current[1] = el} className='layer-1 dark' src={backgroundDark} alt="background" />
-                <div className='cover' />
+                <div className='bg-light'>
+                    <img ref={el => imagesRef.current[0] = el} className='layer-1' src={backgroundLight} alt="background" />
+                </div>
+                <div className='bg-dark'>
+                    <img ref={el => imagesRef.current[1] = el} className='layer-1' src={backgroundDark} alt="background" />
+                </div>
                 {clickHere && <div className='popup'>Click here to see magic</div>}
                 <div className='sun-moon' onClick={changeMode} />
                 <img ref={el => imagesRef.current[2] = el} className='layer-2 light' src={birdLight} alt="bird" />
