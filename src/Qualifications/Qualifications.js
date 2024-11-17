@@ -11,7 +11,7 @@ export default function Qualifications({ refEl, intersecting }) {
             refEl.current[0].classList.add('show')
             appear()
         }
-    }, [intersecting])
+    }, [refEl, intersecting])
 
     function appear() {
         var time = 0

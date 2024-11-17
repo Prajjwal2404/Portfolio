@@ -16,7 +16,7 @@ export default function BallsCanvas({ icon }) {
         }
         canvasRef.current?.addEventListener('webglcontextlost', handleWebGLContextLost)
         return () => canvasRef.current?.removeEventListener('webglcontextlost', handleWebGLContextLost)
-    }, [canvasRef.current])
+    }, [canvasRef])
 
     useLayoutEffect(() => {
         function handleWebGLContextRestored() {
@@ -24,7 +24,7 @@ export default function BallsCanvas({ icon }) {
         }
         canvasRef.current?.addEventListener('webglcontextrestored', handleWebGLContextRestored)
         return () => canvasRef.current?.removeEventListener('webglcontextrestored', handleWebGLContextRestored)
-    }, [canvasRef.current])
+    }, [canvasRef])
 
     const imgUrl = useMemo(() => getImgSrc(icon, mode), [icon, mode])
 
