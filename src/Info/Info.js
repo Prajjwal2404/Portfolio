@@ -12,11 +12,13 @@ import MySQL from '../img/icons/mysql.js'
 import Mongodb from '../img/icons/mongodb.svg'
 import Firebase from '../img/icons/firebase.svg'
 import Oatmilk from '../img/projects/oatmilk.webp'
+import Translator from '../img/projects/translator.webp'
 import ShoeStore from '../img/projects/shoe-store.webp'
 import GameStore from '../img/projects/game-store.webp'
 import Calculator from '../img/projects/calculator.webp'
 import Dashboard from '../img/projects/dashboard.webp'
 import { ReactComponent as OatmilkIcon } from '../img/icons/oatmilk.svg'
+import { ReactComponent as TranslatorIcon } from '../img/icons/translator.svg'
 import { GiRunningShoe } from "react-icons/gi"
 import { IoGameController } from "react-icons/io5"
 import { ImCalculator } from "react-icons/im"
@@ -46,6 +48,24 @@ export const works = [
         project_link: 'https://oatsbynush.com'
     },
     {
+        title: 'Realtime Translator',
+        description: 'Multimodal Real-time Translation web application made using ReactJS',
+        tags: [
+            {
+                tech: 'ReactJS',
+                color: 'turquoise'
+            },
+            {
+                tech: 'ExpressJS',
+                color: 'mediumseagreen'
+            }
+        ],
+        image: Translator,
+        logo: <TranslatorIcon />,
+        code_link: 'https://github.com/Prajjwal2404/Translator',
+        project_link: 'https://webrealtime-translator.vercel.app'
+    },
+    {
         title: 'Shoe Store',
         description: 'An Ecommerce website for selling footwear online made using ReactJS.',
         tags: [
@@ -65,7 +85,7 @@ export const works = [
         image: ShoeStore,
         logo: <GiRunningShoe />,
         code_link: 'https://github.com/Prajjwal2404/Shoe-Store',
-        project_link: 'https://shoe-store-160b2.firebaseapp.com/'
+        project_link: 'https://shoe-store-160b2.firebaseapp.com'
     },
     {
         title: 'Game Store',
@@ -87,7 +107,7 @@ export const works = [
         image: GameStore,
         logo: <IoGameController />,
         code_link: 'https://github.com/Prajjwal2404/Game-Store',
-        project_link: 'https://webgamestore.000webhostapp.com/'
+        project_link: 'https://webgamestore.000webhostapp.com'
     },
     {
         title: 'Dashboard',
@@ -105,7 +125,7 @@ export const works = [
         image: Dashboard,
         logo: <BiSolidDashboard />,
         code_link: 'https://github.com/Prajjwal2404/Dashboard',
-        project_link: 'https://webreactdashboard.netlify.app/'
+        project_link: 'https://webreactdashboard.netlify.app'
     },
     {
         title: 'Scientific Calculator',
