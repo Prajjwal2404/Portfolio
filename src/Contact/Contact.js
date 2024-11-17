@@ -13,16 +13,16 @@ export default function Contact({ visible }) {
                 <div className='contact-card'>
                     <h1>Prajjwal Pratap Shah</h1>
                     <div className='socials'>
-                        <a href={contacts.linkedin} target='_blank' aria-label='linkedin'>
+                        <a href={contacts.linkedin} target='_blank' aria-label='linkedin' rel='noreferrer'>
                             <IoLogoLinkedin />
                         </a>
-                        <a href={contacts.github} target='_blank' aria-label='github'>
+                        <a href={contacts.github} target='_blank' aria-label='github' rel='noreferrer'>
                             <IoLogoGithub />
                         </a>
-                        <a href={contacts.twitter} target='_blank' aria-label='twitter'>
+                        <a href={contacts.twitter} target='_blank' aria-label='twitter' rel='noreferrer'>
                             <IoLogoTwitter />
                         </a>
-                        <a href={contacts.instagram} target='_blank' aria-label='instagram'>
+                        <a href={contacts.instagram} target='_blank' aria-label='instagram' rel='noreferrer'>
                             <IoLogoInstagram />
                         </a>
                     </div>
@@ -30,7 +30,9 @@ export default function Contact({ visible }) {
                     <div className='contact-info'><IoLocation /><p>{contacts.location}</p></div>
                     <div className='contact-info'>
                         <IoMail />
-                        <a className='email' href={`mailto:${contacts.email}`} target='_blank'>{contacts.email}</a>
+                        <a className='email' href={`mailto:${contacts.email}`} target='_blank' rel='noreferrer'>
+                            {contacts.email}
+                        </a>
                     </div>
                     <button type='button' onClick={() => window.open(contacts.resume, '_self')} className='resume'>DOWNLOAD RESUME</button>
                 </div>

@@ -142,11 +142,11 @@
     }
 
     .timeline::after {
-        left: calc((50% - min(15.5rem, 47.5dvw)) + 1rem);
+        left: calc((50% - min(15.5rem, 47.5vw)) + 1rem);
     }
 
     .container {
-        width: min(31rem, 95dvw);
+        width: min(31rem, 95vw);
         padding-left: 5rem;
         padding-right: 0;
     }

@@ -104,7 +104,7 @@
 }
 
 .layer-3 p {
-    width: min(80dvw, 35rem);
+    width: min(80vw, 35rem);
     text-align: center;
     opacity: 0.7;
     font-size: 0.875rem;
@@ -174,9 +174,9 @@
 .sun-moon {
     position: absolute;
     border-radius: 50%;
-    height: 14.75dvw;
-    width: 14.75dvw;
-    bottom: calc(100svh - max(1.75rem, 4dvw));
+    height: 14.75vw;
+    width: 14.75vw;
+    bottom: calc(100svh - max(1.75rem, 4vw));
     left: 50%;
     transform: translate(-49%, calc(min(var(--scrollY), 100svh) / 1.25));
     cursor: pointer;
@@ -190,14 +190,14 @@
 
 @keyframes sunset {
     50% {
-        bottom: 10.7dvw;
+        bottom: 10.7vw;
     }
 }
 
 .popup {
     position: absolute;
     top: 0.25rem;
-    right: calc(50% + 7.375dvw + 1rem);
+    right: calc(50% + 7.375vw + 1rem);
     width: 9rem;
     border-radius: 15px;
     border-top-right-radius: 0;

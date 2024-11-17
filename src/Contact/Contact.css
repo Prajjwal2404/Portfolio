@@ -21,7 +21,7 @@
 }
 
 .contact-card {
-    width: min(30rem, calc(100dvw - 2.5rem));
+    width: min(30rem, calc(100vw - 2.5rem));
     border-radius: 20px;
     background-color: var(--bg-sec);
     padding: 2.5rem 2rem;
@@ -110,8 +110,8 @@
 }
 
 .earth {
-    height: min(30rem, calc(100dvw - 2rem));
-    width: min(30rem, calc(100dvw - 2rem));
+    height: min(30rem, calc(100vw - 2rem));
+    width: min(30rem, calc(100vw - 2rem));
     cursor: grab;
 }
 

@@ -65,9 +65,11 @@ function ProjectCard({ props, logoRef, idx, pulse, pulseRemove }) {
             <div className='image-div'>
                 <img className='project-img' src={props.image} alt={props.title} />
                 <a className='logo' href={props.project_link} target='_blank' aria-label={props.title}
-                    ref={el => logoRef.current[idx] = el} onClick={pulseRemove}>{props.logo}
+                    ref={el => logoRef.current[idx] = el} onClick={pulseRemove} rel='noreferrer'>
+                    {props.logo}
                 </a>
-                <a className='github' href={props.code_link} target='_blank' aria-label={props.title}>
+                <a className='github' href={props.code_link} target='_blank' aria-label={props.title}
+                    rel='noreferrer'>
                     <FaGithub />
                 </a>
             </div>
