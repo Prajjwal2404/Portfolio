@@ -1,22 +1,22 @@
-import Reactjs from '../Img/icons/reactjs.js'
-import Threejs from '../Img/icons/threejs.js'
-import Javascript from '../Img/icons/javascript.svg'
-import ReactRouter from '../Img/icons/reactrouter.js'
-import Php from '../Img/icons/php.svg'
-import Css from '../Img/icons/css.svg'
-import Html from '../Img/icons/html.svg'
-import Java from '../Img/icons/java.svg'
-import AndroidStudio from '../Img/icons/androidstudio.svg'
-import Python from '../Img/icons/python.svg'
-import MySQL from '../Img/icons/mysql.js'
-import Mongodb from '../Img/icons/mongodb.svg'
-import Firebase from '../Img/icons/firebase.svg'
-import Oatmilk from '../Img/projects/oatmilk.webp'
-import ShoeStore from '../Img/projects/shoe-store.webp'
-import GameStore from '../Img/projects/game-store.webp'
-import Calculator from '../Img/projects/calculator.webp'
-import Dashboard from '../Img/projects/dashboard.webp'
-import { ReactComponent as OatmilkIcon } from '../Img/icons/oatmilk.svg'
+import Reactjs from '../img/icons/reactjs.js'
+import Threejs from '../img/icons/threejs.js'
+import Javascript from '../img/icons/javascript.svg'
+import ReactRouter from '../img/icons/reactrouter.js'
+import Php from '../img/icons/php.svg'
+import Css from '../img/icons/css.svg'
+import Html from '../img/icons/html.svg'
+import Java from '../img/icons/java.svg'
+import AndroidStudio from '../img/icons/androidstudio.svg'
+import Python from '../img/icons/python.svg'
+import MySQL from '../img/icons/mysql.js'
+import Mongodb from '../img/icons/mongodb.svg'
+import Firebase from '../img/icons/firebase.svg'
+import Oatmilk from '../img/projects/oatmilk.webp'
+import ShoeStore from '../img/projects/shoe-store.webp'
+import GameStore from '../img/projects/game-store.webp'
+import Calculator from '../img/projects/calculator.webp'
+import Dashboard from '../img/projects/dashboard.webp'
+import { ReactComponent as OatmilkIcon } from '../img/icons/oatmilk.svg'
 import { GiRunningShoe } from "react-icons/gi"
 import { IoGameController } from "react-icons/io5"
 import { ImCalculator } from "react-icons/im"
@@ -226,5 +226,4 @@ export const contacts = {
     location: 'Kothrud,\u00A0\u00A0Pune\u00A0\u00A0-\u00A0\u00A0411038',
     email: 'Prajjwalpratapshah@outlook.com',
     resume: 'https://firebasestorage.googleapis.com/v0/b/shoe-store-160b2.appspot.com/o/resume%2FMy%20Resume.pdf?alt=media&token=a3fff1ec-2945-4b86-8bda-d8f3a0dea91b'
-
 }
