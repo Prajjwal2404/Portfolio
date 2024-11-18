@@ -1,12 +1,13 @@
 import Reactjs from '../img/icons/reactjs.js'
-import Threejs from '../img/icons/threejs.js'
-import Javascript from '../img/icons/javascript.svg'
 import ReactRouter from '../img/icons/reactrouter.js'
+import Threejs from '../img/icons/threejs.js'
+import Framer from '../img/icons/framer.svg'
+import Javascript from '../img/icons/javascript.svg'
+import Expressjs from '../img/icons/expressjs.js'
 import Php from '../img/icons/php.svg'
 import Css from '../img/icons/css.svg'
 import Html from '../img/icons/html.svg'
 import Java from '../img/icons/java.svg'
-import AndroidStudio from '../img/icons/androidstudio.svg'
 import Python from '../img/icons/python.svg'
 import MySQL from '../img/icons/mysql.js'
 import Mongodb from '../img/icons/mongodb.svg'
@@ -39,7 +40,7 @@ export const works = [
             },
             {
                 tech: 'Framer Motion',
-                color: 'mediumseagreen'
+                color: 'hotpink'
             }
         ],
         image: Oatmilk,
@@ -161,8 +162,16 @@ export const technologies = [
         icon: Threejs
     },
     {
+        name: 'Framer Motion',
+        icon: Framer
+    },
+    {
         name: 'JavaScript',
         icon: Javascript
+    },
+    {
+        name: 'ExpressJS',
+        icon: Expressjs
     },
     {
         name: 'PHP',
@@ -179,10 +188,6 @@ export const technologies = [
     {
         name: 'Java',
         icon: Java
-    },
-    {
-        name: 'Android Studio',
-        icon: AndroidStudio
     },
     {
         name: 'Python',
@@ -245,5 +250,5 @@ export const contacts = {
     phone: '+91\u00A07355491281',
     location: 'Kothrud,\u00A0\u00A0Pune\u00A0\u00A0-\u00A0\u00A0411038',
     email: 'Prajjwalpratapshah@outlook.com',
-    resume: 'https://firebasestorage.googleapis.com/v0/b/shoe-store-160b2.appspot.com/o/resume%2FMy%20Resume.pdf?alt=media&token=a3fff1ec-2945-4b86-8bda-d8f3a0dea91b'
+    resume: 'https://firebasestorage.googleapis.com/v0/b/shoe-store-160b2.appspot.com/o/resume%2FMy%20Resume.pdf?alt=media&token=9c7b1bf0-921b-4671-af99-e29be44c85bf'
 }
