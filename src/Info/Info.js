@@ -108,7 +108,7 @@ export const works = [
         image: GameStore,
         logo: <IoGameController />,
         code_link: 'https://github.com/Prajjwal2404/Game-Store',
-        project_link: 'https://webgamestore.000webhostapp.com'
+        project_link: 'http://game-store.iceiy.com'
     },
     {
         title: 'Dashboard',
