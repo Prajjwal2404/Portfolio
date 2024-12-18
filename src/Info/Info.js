@@ -25,6 +25,8 @@ import { IoGameController } from "react-icons/io5"
 import { ImCalculator } from "react-icons/im"
 import { BiSolidDashboard } from "react-icons/bi"
 
+export const about = "I'm Prajjwal Pratap Shah, a web developer currently pursuing an MCA in Applied Machine Learning at UPES Dehradun. I'm passionate about crafting user-friendly websites using ReactJS and other technologies. Welcome to my portfolio!"
+
 export const works = [
     {
         title: 'Oats by Nush',
@@ -108,7 +110,7 @@ export const works = [
         image: GameStore,
         logo: <IoGameController />,
         code_link: 'https://github.com/Prajjwal2404/Game-Store',
-        project_link: 'http://game-store.iceiy.com'
+        project_link: 'http://game-store.onlinewebshop.net'
     },
     {
         title: 'Dashboard',

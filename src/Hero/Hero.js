@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import useMode from '../Components/Mode'
+import { about } from '../Info/Info'
 import backgroundDark from '../img/dark/background.webp'
 import mountain1Dark from '../img/dark/mountain1.webp'
 import mountain2Dark from '../img/dark/mountain2.webp'
@@ -15,12 +16,8 @@ import './Hero.css'
 export default function Hero() {
 
     const ref = useRef()
-    const [clickHere, setClickHere] = useState(false)
+    const [clickHere, setClickHere] = useState(!localStorage.getItem('visited'))
     const { setMode } = useContext(useMode)
-
-    useEffect(() => {
-        if (!localStorage.getItem('visited')) setClickHere(true)
-    }, [])
 
     useEffect(() => {
         function scroll() {
@@ -76,7 +73,7 @@ export default function Hero() {
                 <img ref={el => imagesRef.current[3] = el} className='layer-2 dark' src={meteorDark} alt="meteor" />
                 <div className='layer-3'>
                     <h1>Hello &amp; Welcome</h1>
-                    <p>I'm Prajjwal Pratap Shah, a web developer with a BCA degree from Savitribai Phule Pune University. I love creating websites using ReactJS and other technologies. Welcome to my portfolio!</p>
+                    <p>{about}</p>
                     <div className='scroll-gif' />
                 </div>
                 <img ref={el => imagesRef.current[4] = el} className='layer-4 light' src={mountain1Light} alt="mountain1" />
