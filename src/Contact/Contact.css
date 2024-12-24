@@ -23,7 +23,7 @@
 .contact-card {
     width: min(30rem, calc(100vw - 2.5rem));
     border-radius: 20px;
-    background-color: var(--bg-sec);
+    background-color: rgb(from var(--bg-sec) r g b / 75%);
     padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
