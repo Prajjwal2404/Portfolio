@@ -25,9 +25,11 @@ export default function Contact({ visible }) {
                 if (done) break
                 chunks.push(value)
                 receivedLength += value.length
-                setProgress(Math.round((receivedLength / contentLength) * 100))
+                const percent = Math.round((receivedLength / contentLength) * 100)
+                if (!isNaN(contentLength)) setProgress(percent > 100 ? 100 : percent)
             }
 
+            if (isNaN(contentLength)) setProgress(100)
             const blob = new Blob(chunks)
             const url = URL.createObjectURL(blob)
             ref.current.href = url
