@@ -1,10 +1,42 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import EarthCanvas from '../Components/EarthCanvas'
 import { contacts } from '../Info/Info'
 import { IoLogoLinkedin, IoLogoGithub, IoLogoTwitter, IoLogoInstagram, IoCall, IoMail, IoLocation } from "react-icons/io5"
 import './Contact.css'
 
 export default function Contact({ visible }) {
+
+    const [downloading, setDownloading] = useState(false)
+    const [progress, setProgress] = useState(0)
+    const ref = useRef()
+
+    async function download() {
+        if (ref.current.href) ref.current.click()
+        else {
+            setDownloading(true)
+            const res = await fetch('./resume/resume.pdf')
+            const contentLength = parseInt(res.headers.get('Content-Length'))
+            const reader = res.body.getReader()
+            const chunks = []
+            let receivedLength = 0
+
+            while (true) {
+                const { done, value } = await reader.read()
+                if (done) break
+                chunks.push(value)
+                receivedLength += value.length
+                setProgress(Math.round((receivedLength / contentLength) * 100))
+            }
+
+            const blob = new Blob(chunks)
+            const url = URL.createObjectURL(blob)
+            ref.current.href = url
+            ref.current.download = contacts.resumeName
+            ref.current.click()
+            setDownloading(false)
+            setProgress(0)
+        }
+    }
 
     return (
         <div className='contact-container'>
@@ -34,7 +66,10 @@ export default function Contact({ visible }) {
                             {contacts.email}
                         </a>
                     </div>
-                    <button type='button' onClick={() => window.open(contacts.resume, '_self')} className='resume'>DOWNLOAD RESUME</button>
+                    {downloading ? <div className='download-div' style={{ '--progress': progress }}>
+                        <div className='progress-div' />{progress}%
+                    </div> : <button type='button' onClick={download} className='resume'>DOWNLOAD RESUME</button>}
+                    <a ref={ref} className='resume-link' target='_self' rel='noreferrer' />
                 </div>
                 {visible && <EarthCanvas />}
             </div>

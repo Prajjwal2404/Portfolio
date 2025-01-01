@@ -252,5 +252,5 @@ export const contacts = {
     phone: '+91\u00A07355491281',
     location: 'Kothrud,\u00A0\u00A0Pune\u00A0\u00A0-\u00A0\u00A0411038',
     email: 'Prajjwalpratapshah@outlook.com',
-    resume: 'https://firebasestorage.googleapis.com/v0/b/shoe-store-160b2.appspot.com/o/resume%2FMy%20Resume.pdf?alt=media&token=9c7b1bf0-921b-4671-af99-e29be44c85bf'
+    resumeName: 'Prajjwal_Pratap_Shah_Resume.pdf'
 }
