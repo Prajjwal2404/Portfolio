@@ -33,8 +33,10 @@ export default function Contact({ visible }) {
             ref.current.href = url
             ref.current.download = contacts.resumeName
             ref.current.click()
-            setDownloading(false)
-            setProgress(0)
+            setTimeout(() => {
+                setDownloading(false)
+                setProgress(0)
+            }, 1000)
         }
     }
 

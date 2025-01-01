@@ -130,6 +130,7 @@
     width: 100%;
     background-color: var(--bg-inv);
     overflow: hidden;
+    transition: left 0.5s linear;
 }
 
 .contact-card .progress-div::before {
@@ -143,6 +144,7 @@
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
+    transition: left 0.5s linear;
 }
 
 .contact-card .resume-link {
