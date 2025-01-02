@@ -250,7 +250,7 @@ export const contacts = {
     twitter: 'https://twitter.com/_shhhah_',
     instagram: 'https://www.instagram.com/_.shhhah._',
     phone: '+91\u00A07355491281',
-    location: 'Kothrud,\u00A0\u00A0Pune\u00A0\u00A0-\u00A0\u00A0411038',
+    location: 'Dehradun,\u00A0India\u00A0\u00A0-\u00A0\u00A0248007',
     email: 'Prajjwalpratapshah@outlook.com',
     resumeName: 'Prajjwal_Pratap_Shah_Resume.pdf'
 }
