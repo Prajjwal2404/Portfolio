@@ -211,20 +211,12 @@ export const technologies = [
 
 export const experiences = [
     {
-        title: 'ICSE Class X',
-        organization: "St. Francis' College",
-        location: 'Lucknow',
-        duration: '04/2016 - 05/2017',
-        performance: 'Percentage - 85%',
-        skills: 'Science, Mathematics'
-    },
-    {
-        title: 'ISC Class XII',
-        organization: "St. Francis' College",
-        location: 'Lucknow',
-        duration: '04/2018 - 05/2019',
-        performance: 'Percentage - 71.5%',
-        skills: 'PCM with Computer'
+        title: 'Master Of Computer Applications',
+        organization: 'University of Petroleum and Energy Studies',
+        location: 'Dehradun',
+        duration: '08/2024 - 05/2026',
+        performance: 'Ongoing',
+        skills: 'Machine Learning'
     },
     {
         title: 'Bachelor Of Computer Applications',
@@ -235,12 +227,20 @@ export const experiences = [
         skills: 'Computer Science'
     },
     {
-        title: 'Master Of Computer Applications',
-        organization: 'University of Petroleum and Energy Studies',
-        location: 'Dehradun',
-        duration: '08/2024 - Ongoing',
-        performance: '',
-        skills: 'Computer Science'
+        title: 'ISC Class XII',
+        organization: "St. Francis' College",
+        location: 'Lucknow',
+        duration: '04/2018 - 05/2019',
+        performance: 'Score - 71.5%',
+        skills: 'PCM, Computer'
+    },
+    {
+        title: 'ICSE Class X',
+        organization: "St. Francis' College",
+        location: 'Lucknow',
+        duration: '04/2016 - 05/2017',
+        performance: 'Score - 85%',
+        skills: 'Science, Maths'
     }
 ]
 
