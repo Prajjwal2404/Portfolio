@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { works } from '../Info/Info'
 import { FaGithub } from "react-icons/fa"
 import { IoChevronUpOutline, IoChevronDownOutline } from "react-icons/io5"
+import { BsFillBookmarkHeartFill } from "react-icons/bs"
 import './Projects.css'
 
 export default function Projects() {
@@ -73,7 +74,7 @@ function ProjectCard({ props, logoRef, idx, pulse, pulseRemove }) {
                     <FaGithub />
                 </a>
             </div>
-            <h2>{props.title}</h2>
+            <h2>{props.title}{props.must_view && <BsFillBookmarkHeartFill />}</h2>
             <p>{props.description}</p>
             <div className='tags'>{tags}</div>
         </div>

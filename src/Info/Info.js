@@ -48,7 +48,8 @@ export const works = [
         image: Oatmilk,
         logo: <OatmilkIcon />,
         code_link: 'https://github.com/Prajjwal2404/OatMilk',
-        project_link: 'https://oatsbynush.com'
+        project_link: 'https://oatsbynush.com',
+        must_view: true
     },
     {
         title: 'Realtime Translator',

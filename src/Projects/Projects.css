@@ -125,6 +125,17 @@
     transform: scale(0.95);
 }
 
+.project-card h2:has(svg) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.project-card h2 svg {
+    color: crimson;
+}
+
 .project-card p {
     --difference: 25%;
     font-size: 0.9rem;
