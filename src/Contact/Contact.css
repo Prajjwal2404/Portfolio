@@ -8,7 +8,6 @@
 
 .contact-container h1 {
     text-align: center;
-    font-size: clamp(1.8rem, 10vw - 10px, 2rem);
 }
 
 .contact-wrapper {
@@ -34,6 +33,7 @@
 
 .contact-card h1 {
     text-align: start;
+    font-size: clamp(1.8rem, 10vw - 10px, 2rem);
 }
 
 .contact-card a {
