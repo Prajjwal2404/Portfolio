@@ -19,7 +19,7 @@
     </g>
     <style>
         #translator {
-            margin: 0.65rem;
+            margin: 0.7rem;
         }
 
         @media (pointer: coarse) {

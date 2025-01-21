@@ -8,7 +8,7 @@
 
 .contact-container h1 {
     text-align: center;
-    user-select: none;
+    font-size: clamp(1.8rem, 10vw - 10px, 2rem);
 }
 
 .contact-wrapper {
