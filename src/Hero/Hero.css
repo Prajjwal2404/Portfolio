@@ -155,7 +155,6 @@
 
 .layer-3 {
     transform: translateY(calc(min(var(--scrollY), 100svh) / 1.5));
-    pointer-events: none;
 }
 
 .layer-4 {
