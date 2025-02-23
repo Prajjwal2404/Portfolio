@@ -16,7 +16,7 @@ export default function Background() {
                     <stop offset=".28" stopColor={mode ? '#b0b890' : '#40509b'} />
                     <stop offset=".4" stopColor={mode ? '#90c0a0' : '#423b88'} />
                     <stop offset=".52" stopColor={mode ? '#70c8b0' : '#422f7c'} />
-                    <stop offset="1" stopColor={mode ? '#40bcff' : '#382168'} />
+                    <stop offset="1" stopColor={mode ? '#40bcff' : '#392168'} />
                 </linearGradient>
                 <linearGradient id="cloud-left" x1="88.81" y1="212.47" x2="71.09" y2="287.09" gradientUnits="userSpaceOnUse">
                     <stop offset="0" stopColor="#fff" />
