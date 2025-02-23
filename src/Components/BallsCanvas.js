@@ -12,20 +12,14 @@ export default function BallsCanvas({ icon }) {
 
     useLayoutEffect(() => {
         const canvas = canvasRef.current
-        function handleWebGLContextLost() {
-            setRenderCrash(true)
-        }
-        canvas?.addEventListener('webglcontextlost', handleWebGLContextLost)
-        return () => canvas?.removeEventListener('webglcontextlost', handleWebGLContextLost)
+        canvas?.addEventListener('webglcontextlost', () => setRenderCrash(true))
+        return () => canvas?.removeEventListener('webglcontextlost', () => setRenderCrash(true))
     }, [canvasRef])
 
     useLayoutEffect(() => {
         const canvas = canvasRef.current
-        function handleWebGLContextRestored() {
-            setRenderCrash(false)
-        }
-        canvas?.addEventListener('webglcontextrestored', handleWebGLContextRestored)
-        return () => canvas?.removeEventListener('webglcontextrestored', handleWebGLContextRestored)
+        canvas?.addEventListener('webglcontextrestored', () => setRenderCrash(false))
+        return () => canvas?.removeEventListener('webglcontextrestored', () => setRenderCrash(false))
     }, [canvasRef])
 
     const imgUrl = useMemo(() => getImgSrc(icon, mode), [icon, mode])
@@ -57,7 +51,7 @@ function Ball({ img, mode }) {
             <mesh scale={2.75}>
                 <icosahedronGeometry args={[1, 1]} />
                 <meshStandardMaterial color={mode ? '#959595' : '#fff'} flatShading />
-                <Decal position={[0, 0, 1]} rotation={[2 * Math.PI, 0, 6.25]} scale={1} map={decal} flatShading />
+                <Decal position={[0, 0, 1]} rotation={[2 * Math.PI, 0, 0]} map={decal} flatShading />
             </mesh>
         </Float>
     )

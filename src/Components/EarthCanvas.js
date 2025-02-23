@@ -26,7 +26,7 @@ export default function EarthCanvas() {
 
 function Earth({ rel, reload, setReload }) {
 
-  const scene = EarthLoader()
+  const { scene } = useGLTF("./planet/scene.gltf")
 
   if (reload) {
     useGLTF.clear("./planet/scene.gltf")
@@ -35,10 +35,7 @@ function Earth({ rel, reload, setReload }) {
 
   scene.onAfterRender(rel.current?.classList.add('fade'))
 
-  return <primitive object={scene} scale={3} position-y={0} rotation-y={0} />
+  return <primitive object={scene} scale={3} />
 }
 
-export function EarthLoader() {
-  const { scene } = useGLTF("./planet/scene.gltf")
-  return scene
-}
+useGLTF.preload("./planet/scene.gltf")

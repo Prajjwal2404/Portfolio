@@ -33,7 +33,7 @@ function Stars({ mode, rel }) {
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} positions={sphere} stride={3} onAfterRender={() => rel.current?.classList.add('fade')}>
-        <PointMaterial transparent color={mode ? '#000' : '#fff'} size={0.002} sizeAttenuation={true} depthWrite={false} />
+        <PointMaterial transparent color={mode ? '#000' : '#fff'} size={0.002} depthWrite={false} />
       </Points>
     </group>
   )

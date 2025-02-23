@@ -11,7 +11,9 @@ export default function Skills() {
             <div className='skills-wrapper'>
                 {technologies.map(technology => (
                     <div className='skill-div' key={technology.name}>
-                        <BallsCanvas icon={technology.icon} />
+                        <div className='skill-icon'>
+                            <BallsCanvas icon={technology.icon} />
+                        </div>
                         <p>{technology.name}</p>
                     </div>
                 ))}

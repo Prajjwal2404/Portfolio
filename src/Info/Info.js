@@ -7,8 +7,8 @@ import Expressjs from '../img/icons/expressjs.js'
 import Php from '../img/icons/php.svg'
 import Css from '../img/icons/css.svg'
 import Html from '../img/icons/html.svg'
-import Java from '../img/icons/java.svg'
 import Python from '../img/icons/python.svg'
+import Java from '../img/icons/java.svg'
 import MySQL from '../img/icons/mysql.js'
 import Mongodb from '../img/icons/mongodb.svg'
 import Firebase from '../img/icons/firebase.svg'
@@ -189,12 +189,12 @@ export const technologies = [
         icon: Html
     },
     {
-        name: 'Java',
-        icon: Java
-    },
-    {
         name: 'Python',
         icon: Python
+    },
+    {
+        name: 'Java',
+        icon: Java
     },
     {
         name: 'MySQL',

@@ -1,5 +1,4 @@
 import { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { EarthLoader } from '../Components/EarthCanvas'
 import useMode from '../Components/Mode'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
 import Hero from '../Hero/Hero'
@@ -11,12 +10,6 @@ import StarsCanvas from '../Stars/Stars'
 import './App.css'
 
 export default function App() {
-
-  useEffect(() => {
-    const preLoad = async () => EarthLoader()
-    preLoad().catch(() => { })
-    return () => preLoad().then(() => { })
-  }, [])
 
   const ref = useRef([])
   const [visible, setVisible] = useState(false)

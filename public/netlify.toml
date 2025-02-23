@@ -12,3 +12,8 @@
   for = "/static/media/*.webp"
   [headers.values]
     Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/static/js/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"

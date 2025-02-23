@@ -15,6 +15,14 @@
 }
 
 .skill-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-icon {
     width: 7rem;
     height: 7rem;
 }
@@ -30,8 +38,6 @@
 .skill-div p {
     user-select: none;
     text-align: center;
-    margin-top: 0.5rem;
-    white-space: nowrap;
 }
 
 .low-spec {
@@ -50,8 +56,8 @@
     margin-top: 1.25rem;
 }
 
-@media screen and (max-width: 510px) {
-    .skill-div {
+@media screen and (max-width: 500px) {
+    .skill-icon {
         height: 6rem;
         width: 6rem;
     }
