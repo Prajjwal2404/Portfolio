@@ -113,20 +113,37 @@
 
 .layer-3 .scroll-gif::after {
     content: '';
-    height: 0.35rem;
-    border-left: 1px solid;
-    border-right: 1px solid;
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: currentColor;
+    border-radius: 50%;
     opacity: 0.7;
     position: absolute;
-    top: 15%;
+    top: 65%;
     left: 50%;
     transform: translateX(-50%);
-    animation: mouse 2s linear infinite;
+    animation: mouse 3s linear infinite;
 }
 
 @keyframes mouse {
+    25% {
+        top: 10%;
+        opacity: 0.7;
+    }
+
     50% {
-        top: -30%;
+        top: 10%;
+        opacity: 0;
+    }
+
+    75% {
+        top: 65%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 65%;
+        opacity: 0.7;
     }
 }
 
