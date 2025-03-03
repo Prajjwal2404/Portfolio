@@ -14,9 +14,9 @@ export default function Mountain2() {
                 </clipPath>
                 <linearGradient id="mountain-gradient2" x1="304.2" y1="373.99" x2="304.2" y2="202.94"
                     gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stopColor={mode ? '#b33900' : '#432b79'} stopOpacity="0" />
-                    <stop offset=".45" stopColor={mode ? '#b3450a' : '#382466'} stopOpacity=".48" />
-                    <stop offset="1" stopColor={mode ? '#b35216' : '#2d1d52'} />
+                    <stop offset="0" stopColor={mode ? '#b33900' : '#261647'} stopOpacity="0" />
+                    <stop offset=".45" stopColor={mode ? '#b3450a' : '#201240'} stopOpacity=".48" />
+                    <stop offset="1" stopColor={mode ? '#b35216' : '#190d33'} />
                 </linearGradient>
             </defs>
             <g clipPath="url(#clip-path-2)">

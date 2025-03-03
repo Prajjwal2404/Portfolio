@@ -102,7 +102,7 @@
 }
 
 .layer-3 .scroll-gif {
-    width: 1.2rem;
+    width: 1.25rem;
     height: 2.2rem;
     border-radius: 30px;
     border: 2px solid currentColor;
@@ -113,13 +113,12 @@
 
 .layer-3 .scroll-gif::after {
     content: '';
-    height: 0.5rem;
-    width: 0.5rem;
+    height: 0.575rem;
+    width: 0.575rem;
     background-color: currentColor;
     border-radius: 50%;
-    opacity: 0.7;
     position: absolute;
-    top: 65%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     animation: mouse 3s linear infinite;
@@ -128,7 +127,7 @@
 @keyframes mouse {
     25% {
         top: 10%;
-        opacity: 0.7;
+        opacity: 1;
     }
 
     50% {
@@ -137,13 +136,13 @@
     }
 
     75% {
-        top: 65%;
+        top: 60%;
         opacity: 0;
     }
 
     100% {
-        top: 65%;
-        opacity: 0.7;
+        top: 60%;
+        opacity: 1;
     }
 }
 
