@@ -13,12 +13,14 @@ import MySQL from '../img/icons/mysql.js'
 import Mongodb from '../img/icons/mongodb.svg'
 import Firebase from '../img/icons/firebase.svg'
 import Oatmilk from '../img/projects/oatmilk.webp'
+import Particles from '../img/projects/particles.webp'
 import Translator from '../img/projects/translator.webp'
 import ShoeStore from '../img/projects/shoe-store.webp'
 import GameStore from '../img/projects/game-store.webp'
 import Calculator from '../img/projects/calculator.webp'
 import Dashboard from '../img/projects/dashboard.webp'
 import { ReactComponent as OatmilkIcon } from '../img/icons/oatmilk.svg'
+import { ReactComponent as ParticlesIcon } from '../img/icons/particles.svg'
 import { ReactComponent as TranslatorIcon } from '../img/icons/translator.svg'
 import { GiRunningShoe } from "react-icons/gi"
 import { IoGameController } from "react-icons/io5"
@@ -49,6 +51,25 @@ export const works = [
         logo: <OatmilkIcon />,
         code_link: 'https://github.com/Prajjwal2404/OatMilk',
         project_link: 'https://oatsbynush.com',
+        must_view: true
+    },
+    {
+        title: 'Particles World',
+        description: 'Particles cloud website made using ReactJS and ThreeJS',
+        tags: [
+            {
+                tech: 'ReactJS',
+                color: 'turquoise'
+            },
+            {
+                tech: 'ThreeJS',
+                color: 'fuchsia'
+            }
+        ],
+        image: Particles,
+        logo: <ParticlesIcon />,
+        code_link: 'https://github.com/Prajjwal2404/Particles',
+        project_link: 'https://particles-world.netlify.app',
         must_view: true
     },
     {
